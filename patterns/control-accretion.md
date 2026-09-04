@@ -3,6 +3,11 @@
 **Confidence / Status:** Observed / Active
 **Anchor case(s):** `../cases/accepted/004-control-accretion-rerun.md`
 
+### Plain-Language Version (人话版)
+
+To make sure nothing was done wrong, we kept adding checks — until the
+checks themselves became the thing making it wrong.
+
 ## What it is
 
 Each individual verification, check, or safeguard added mid-task is

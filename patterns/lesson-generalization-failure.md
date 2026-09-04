@@ -3,6 +3,12 @@
 **Confidence / Status:** Observed / Active
 **Anchor case(s):** `../cases/accepted/003-lesson-generalization-failure.md`
 
+### Plain-Language Version (人话版)
+
+Last time you got hit, you only remembered not to touch that exact spot.
+Change the shape a little, and you fall into the same hole again — not
+because you forgot, but because what you remembered was too narrow.
+
 ## What it is
 
 Remembering a correction is not the same as having learned its boundary.

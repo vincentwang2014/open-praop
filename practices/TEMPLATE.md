@@ -8,6 +8,12 @@ trace to at least one case — if you don't have one yet, this belongs in
 
 One sentence describing what to do.
 
+### Plain-Language Version (人话版)
+
+One or two sentences, ordinary language, no jargon. If you can't write
+this clearly, the practice doesn't pass the EDTCU Test yet (see the
+protocol's §3, Renhua) — fix this line before filling in the rest.
+
 ### Problem Addressed
 
 What failure shape (or pattern) is this trying to reduce?

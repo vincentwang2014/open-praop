@@ -79,7 +79,29 @@ any public launch decision. Findings:
 
 No protocol changes resulted from either pilot. The repo-wide de-
 identification finding shaped how this public repo's content was exported
-(see each case's provenance note), not the protocol text itself.
+(a repo-wide sweep at export time caught the protocol's own §7 worked
+examples using real project identifiers as "before" text — fixed to use
+placeholder examples instead), not the protocol text itself.
+
+**Renhua (人话) formalized as an operating principle, tested by EDTCU
+(2026-09-04, still v0.1-final).** §3's existing "Plain Language Required"
+principle was renamed and elevated to **Renhua (人话)** — kept in Chinese
+deliberately rather than fully translated, because the term carries an
+attitude ("don't let terminology and fluent AI output stand in for real
+understanding") that "Plain Language" alone doesn't fully capture. Three
+layers: Renhua is the principle, a Plain-Language Version is the
+practice, and the **EDTCU Test** — Even Donald Trump Can Understand, a
+deliberately humorous stress test, also called EddieQ — is how it's
+checked. Comes with an explicit Evidence → Interpretation →
+Plain-language explanation (Renhua) → Human understanding →
+Decision/ownership chain explaining *why* it matters (semantic
+ownership, not writing style). It now also constrains content, not just
+judgment: Pattern entries (§2.2), the Practice Template (§5), and the
+Playbook Template (§6) each require a **Plain-Language Version（人话版）**
+field. Not a new principle — it formalizes the Layer B (人话) convention
+already used in the private origin project's own case notes, and extends
+it to Patterns/Practices/Playbooks, which previously had no equivalent
+requirement.
 
 ---
 
@@ -149,6 +171,11 @@ Pattern 不是因为名字好听就成立。
 
 必须从案例中长出来。
 
+每条 Pattern 记录必须包含一个 **Plain-Language Version（人话版）**
+（见 §3 Renhua / EDTCU Test）——用普通话回答"这到底是什么意思"，不能只有专业
+定义。指不出人话版本的说法，和指不出 case anchor 的说法一样，不能算
+已经被组织真正掌握。
+
 ---
 
 ## 2.3 Practices
@@ -215,9 +242,80 @@ Open PRAOP 遵守几个最小原则。
 
 Practice 和 Enforcement 必须区分。
 
-### Plain Language Required
+### Renhua (人话)
 
-如果一个概念不能翻译回正常人能理解的 operational language，它还没有被组织真正掌握。
+> **Renhua (人话) — say it so the human who owns the consequence can
+> actually understand it.**
+
+这不只是要求文字浅显，而是在说：不要让术语、抽象概念和 AI 流畅的表达方式
+盖住了真正的理解。英文里最接近的说法是 Plain Language，但"人话"多了一层
+态度，这层态度值得原样保留，不完全翻译掉——Open PRAOP 本身是从真实工作中
+长出来的，不必假装每个概念一开始就来自英语管理学词汇。
+
+正式表述：
+
+> **If the person responsible for the outcome cannot explain the issue in
+> ordinary language, semantic ownership has not been established.**
+>
+> 如果负责这个结果的人没法用日常语言把问题讲清楚，semantic ownership 就
+> 还没有真正建立。
+
+人话：
+
+> 说不明白，就别假装已经懂了。
+
+这条原则解决的不是文风问题，而是 **semantic ownership** 问题：如果一个
+组织里，AI 能流利地说出一整套术语，而真正对结果负责的人只能"嗯嗯，好像
+懂了"，那这个组织已经失去了一部分对自己决策的语义所有权——即使流程上看
+起来一切正常。
+
+PRAOP 把 Renhua 拆成三层：
+
+* **Renhua / 人话** — 原则本身。
+* **Plain-language explanation** — 实践方式：每一条 Pattern、Practice、
+  Playbook 都必须附带一个 **Plain-Language Version（人话版）** 字段，
+  用普通话把它讲清楚——见 §5、§6 对应的模板字段。
+* **EDTCU** — 具体的 stress test。
+
+> **EDTCU is the stress test for Renhua.**
+>
+> EDTCU — Even Donald Trump Can Understand. A deliberately humorous
+> plain-language test: if an important idea cannot be explained in
+> ordinary, concrete language, we should not assume it is
+> organizationally understood.
+
+**关于这个名字：** EDTCU 借用一个知名度极高、说话风格极简直接的公众人物
+作为记忆点，不代表任何政治立场，也不是在评价这个人本身——重点始终是
+"能不能把话说到几乎所有人都听得懂"。社区里也常把它简称为 **EddieQ**。
+
+PRAOP 因此把"理解"拆成一条链：
+
+```text
+Evidence
+    ↓
+Interpretation
+    ↓
+Plain-language explanation (Renhua)
+    ↓
+Human understanding
+    ↓
+Decision / ownership
+```
+
+如果中间"Plain-language explanation"这一环断掉，后面的 human understanding
+和 ownership 很可能只是名义上的——决策记录上写着"已批准"，但批准的这个人
+其实没有真正掌握发生了什么。
+
+一个实际用途：当多个 AI 系统就某个抽象说法互相认同（"两个模型都同意这是
+一个 semantic authority topology 问题"），这本身不能当作 evidence 增加
+（见 §18 "AI Consensus as Evidence"）。相反，这正是该停下来做 EDTCU Test
+的信号——如果没有人能用三句话把这件事讲给真正对业务结果负责的人听懂，那
+这本身就是一个 risk signal，而不是"已经达成共识"。
+
+这条原则也不是新发明。私有源项目自己的 case notes 里，既有的 Layer B
+（人话）restatement 惯例已经在实践它。这里只是把它从 case-level 的写作
+惯例，提升为正式的 PRAOP operating principle，并要求 Pattern / Practice /
+Playbook 同样遵守，不只是 case 才有。
 
 ---
 
@@ -382,6 +480,12 @@ Practice 必须可以追溯到案例或其他 evidence。
 
 一句话说明做什么。
 
+### Plain-Language Version（人话版）
+
+用日常语言，一两句话说清楚这条 Practice 到底在说什么——不能只有专业
+表述。如果说不清楚，说明 EDTCU Test（§3）还没通过，先把这句话
+写清楚，再往下填。
+
 ### Problem Addressed
 
 这个 Practice 试图减少什么 failure shape？
@@ -443,6 +547,11 @@ Playbook 是多条 Practice 组合后的工作流程。
 例如：
 
 > Vibe Coding Team Starter Playbook
+
+### Plain-Language Version（人话版）
+
+一两句话，用日常语言说清楚这个 Playbook 是让团队做什么。同样受 §3
+EDTCU Test 约束。
 
 ### Who Is This For?
 
