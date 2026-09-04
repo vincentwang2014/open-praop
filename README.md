@@ -1,107 +1,305 @@
 # Open PRAOP
 
-**How people and AI actually work together, fail together, and get
-cheaper to fail next time.**
+*Probabilistic Reliability Operations Practice*
 
-Open PRAOP is an open, case-driven, falsifiable, continuously-revised
-repository of operational practice for AI-assisted work.
+PRAOP is an open, case-driven practice for learning how humans and AI
+systems can work together reliably.
 
-It is not:
+It starts from a simple idea:
 
-- an AI model leaderboard
-- a prompt-technique collection
-- an AI-complaints community
-- a model-safety benchmark
-- a finished AI governance standard
-- a best-practices handbook for any single vendor or model
+> AI is not a deterministic machine. It is a probabilistic agent.
 
-Open PRAOP studies AI-assisted work, agent workflow, human–AI
-coordination, verification, organizational memory, escalation,
-responsibility, reliability controls, and operational learning — not
-model internals.
+Humans are probabilistic agents too.
 
-> **AI Security protects systems from attacks and unsafe model behavior.
-> Open PRAOP focuses on protecting organizations from unreliable
-> AI-assisted work.**
+But AI is not simply a faster or more knowledgeable human. It is a
+different kind of probabilistic agent, with different strengths,
+different failure patterns, different memory boundaries, different ways
+of using context, and different ways of going wrong.
 
-That's a scope boundary, not a claim that the two are unrelated.
+We already have thousands of years of experience learning how to work
+with other humans.
 
-## Status
+We are only beginning to learn how to work with AI.
 
-**v0.1-final.** Launched with the protocol, templates, and two cases
-migrated from private pilot runs that validated the pipeline end-to-end
-before this repo existed. Both cases sit at `Observed / Active` — the
-lowest confidence tier. That's intentional: two cases is not a taxonomy,
-and nothing here should read as more settled than it is.
+PRAOP is an attempt to learn that systematically.
 
-| Pattern | Confidence / Status | Anchor case |
-|---|---|---|
-| Control Accretion | Observed / Active | `cases/accepted/004-control-accretion-rerun.md` |
-| Lesson-Generalization Failure | Observed / Active | `cases/accepted/003-lesson-generalization-failure.md` |
+## Why PRAOP Exists
 
-## How this repo works
+When a company hires a new employee, managers do not assume they already
+understand exactly how that person will behave.
 
-Read `protocol/open-praop-v0.1-final.md` for the full protocol. Short
-version:
+They work together. They observe. They notice strengths and weaknesses.
+They remember what happened. They adjust how they communicate, review,
+delegate, and intervene. Over time, they learn how to work together.
 
-1. **Cases** answer "what actually happened." Firsthand reports of
-   AI-assisted work — failures, near-misses, or things that worked
-   unusually well.
-2. **Patterns** answer "does the same failure or success shape recur
-   across cases." A pattern must be traceable to at least one `Accepted`
-   case (see the protocol's Anchor-or-Demote rule) — no pattern gets to
-   exist on the strength of a good name alone.
-3. **Practices** answer "given evidence, what can a team actually do about
-   it." Must be concrete enough to execute or test.
-4. **Playbooks** answer "how does a team combine several Practices into a
-   daily workflow." v0.1 doesn't pursue volume here, just the format.
+Now imagine that the new employee is not human.
 
-Confidence for Patterns and Practices is tracked on two independent axes
-— **Confidence** (Observed → Emerging → Operational → Canonical) and
-**Status** (Active / Contested / Deprecated) — so a claim can be
-`Operational + Contested` without losing information. See §9–10 of the
-protocol.
+It can write code, analyze documents, make plans, call tools,
+communicate with customers, and operate software. But its behavior is
+not fully predictable. It may:
 
-## Structure
+- follow a wrong assumption for hours while producing plausible work;
+- remember a correction but fail to apply the lesson in a new form;
+- say a task is complete before the real-world outcome has been
+  verified;
+- become influenced by information simply because that information is
+  visible in context;
+- reproduce the same blind spot across multiple agents;
+- accumulate reasonable safeguards until the safeguards themselves
+  become the main problem.
+
+These are not necessarily signs that the AI is "bad." They are
+observations about how this new kind of worker behaves inside real
+systems.
+
+PRAOP asks:
+
+> Given that AI works this way, how should we work with it?
+
+## PRAOP Is a Practice, Not a Finished Theory
+
+PRAOP does not begin with a doctrine and search for examples that prove
+it. It begins with incidents.
+
+The basic loop is:
 
 ```text
-open-praop/
-├── protocol/       the full v0.1-final protocol document
-├── cases/          case submission template + accepted cases
-├── patterns/       pattern candidates and their confidence/status
-├── practices/      practice candidates, evidence, enforcement level
-├── playbooks/       format only in v0.1, no content yet
-└── discussions/     how to challenge a classification, pattern, or practice
+Something happens
+        ↓
+Record it
+        ↓
+Understand what actually happened
+        ↓
+Compare it with other cases
+        ↓
+Look for recurring patterns
+        ↓
+Develop a working practice
+        ↓
+Use it
+        ↓
+Observe what happens next
+        ↓
+Revise
 ```
+
+Or more simply:
+
+> Observe → Record → Compare → Learn → Try → Revise
+
+PRAOP is therefore expected to change. A pattern that looks important
+today may later turn out to be too broad. A best practice may work in
+one environment and fail in another. A previously strong claim may
+become contested. A new case may reveal an entirely new failure shape.
+
+That is not a failure of PRAOP. That is how PRAOP is supposed to work.
+
+## Cases Before Doctrine
+
+The fundamental unit of PRAOP is the case. A case asks:
+
+- What were you trying to do?
+- What actually happened?
+- Why did it matter?
+- What did you try?
+- What happened afterward?
+- What evidence exists?
+- What might we be misunderstanding?
+
+Cases are then used to develop:
+
+```text
+Cases
+  ↓
+Patterns
+  ↓
+Practices
+  ↓
+Playbooks
+```
+
+**Cases** — what actually happened?
+
+**Patterns** — does the same failure or success shape appear across
+multiple independent incidents?
+
+**Practices** — what should a team do differently?
+
+**Playbooks** — how can those practices become a repeatable operating
+workflow?
+
+## PRAOP Is Not an AI Failure Museum
+
+Failures matter because they teach us something. But success matters
+too.
+
+Open PRAOP welcomes cases where something worked unusually well:
+
+- a team found a better way to review AI-generated code;
+- an agent workflow reduced errors without adding excessive control;
+- a human interruption prevented a long wrong trajectory;
+- removing information from context improved reliability;
+- a simple verification step eliminated a recurring problem.
+
+We want to understand both "why did this fail?" and "why did this
+work?"
+
+## Evidence Matters
+
+A well-written story is not automatically strong evidence. Open PRAOP
+distinguishes between self-reported incidents, incidents supported by
+artifacts, incidents that can be reconstructed, and independently
+verified incidents.
+
+We try to separate *what happened* from *what we think it means*. This
+matters because AI systems — and humans — are very good at producing
+convincing explanations after the fact.
+
+PRAOP therefore follows a simple rule:
+
+> Artifact > Memory
+
+And another:
+
+> Accepting a case does not mean accepting the theory built from it.
+
+## No Fit Is a Valid Result
+
+Open PRAOP does not require every case to fit an existing category. A
+submission may be a strong fit, a partial fit, a new pattern candidate,
+genuinely outside PRAOP's scope, or evidence that an existing PRAOP idea
+is wrong.
+
+This is important. A framework that explains everything explains
+nothing. We actively want cases that challenge PRAOP.
+
+## PRAOP Evolves
+
+Patterns and practices in Open PRAOP have both a confidence level and a
+status. A pattern can become stronger as evidence accumulates. But it
+can also become **Contested** — new evidence challenges it — or
+**Deprecated** — it is no longer recommended or has been replaced.
+
+Even something that was once considered strong can later become
+contested. PRAOP is not intended to become a collection of permanent
+commandments. It is intended to remain an evolving body of operational
+knowledge.
+
+## A Different Kind of Guardrail
+
+AI safety and AI security often focus on the model or system itself:
+unsafe outputs, prompt injection, data leakage, access control,
+adversarial behavior.
+
+PRAOP looks at a different layer:
+
+> What happens to the organization when probabilistic AI agents
+> participate in real work?
+
+Examples include: wrong assumptions becoming working reality;
+verification disappearing between systems; responsibility becoming
+unclear; organizational memory drifting; AI agents reinforcing the same
+error; human reviewers losing semantic ownership; reliability controls
+becoming so complex that they displace the actual work.
+
+A useful shorthand:
+
+> **AI Security protects systems. PRAOP helps protect organizations
+> using AI.**
+
+The two overlap, but they are not the same problem.
+
+## From Knowledge to Practice to Enforcement
+
+Knowing a rule is not the same as following it. PRAOP distinguishes
+three levels:
+
+- **Knowledge** — "I know this can happen."
+- **Practice** — "We have a defined way to handle it."
+- **Enforcement** — "The system makes it difficult to ignore."
+
+This distinction matters because many AI failures happen even after
+everyone involved already "knows" the lesson. A future goal of PRAOP is
+therefore not only to publish advice, but to help turn recurring lessons
+into operational workflows and, where appropriate, mechanical
+guardrails.
+
+## Open PRAOP
+
+This repository is the public, open version of PRAOP. It contains four
+primary kinds of material:
+
+- **Cases** — real operational incidents
+- **Patterns** — recurring behavioral or organizational shapes
+- **Practices** — actionable responses supported by evidence
+- **Playbooks** — workflows that combine multiple practices
+
+The full protocol (submission templates, de-identification rules,
+evidence levels, promotion rules) lives in
+`protocol/open-praop-v0.1-final.md`.
+
+You do not need to understand PRAOP terminology to contribute. If
+something interesting happened while you were working with AI, tell us
+what happened.
+
+> Tell us the case. We can argue about the theory later.
 
 ## Contributing
 
-See `CONTRIBUTING.md`. The short version: **tell us what happened, you
-don't need to know what Open PRAOP calls it.** Maintainers handle
-classification, not contributors.
+You can contribute a failure case, a success case, evidence related to
+an existing case, a challenge to an existing pattern, a proposed
+practice, a better explanation, or a case that does not fit PRAOP at
+all.
 
-## Where this came from
+Start with `CONTRIBUTING.md`. Before submitting a case, please use the
+de-identification guidance in the protocol. The goal is:
 
-This repo's protocol and initial two cases were exported from a private
-working methodology repository after two internal pilot runs walked
-existing cases through the full submission → de-identification →
-evidence-tagging → mapping pipeline to find real friction before anything
-went public. Neither pilot required a protocol change; one of them found
-that de-identification has to be checked repo-wide, not file-by-file —
-which is why every file here was checked against the full export set, not
-reviewed in isolation. Full pilot writeups are not part of this public
-repo (they reference the private source project); the protocol document's
-changelog summarizes what each one found.
+> Redact identity, preserve causality.
+
+Do not submit secrets, credentials, private customer information, or
+material you do not have the right to share.
+
+## Current Status
+
+Open PRAOP is early. That is intentional.
+
+We are not claiming that the current taxonomy is complete. We are not
+claiming that the current practices are universal. We are not trying to
+turn a small number of observations into a standard prematurely.
+
+The project will earn stronger claims only through more independent
+cases, better evidence, real-world use, failed practices, competing
+explanations, and deliberate attempts to falsify its own ideas.
+
+## The Goal
+
+The goal of PRAOP is not to make AI behave like a human. It is not to
+eliminate uncertainty. And it is not to create enough rules to make
+probabilistic systems deterministic.
+
+The goal is simpler:
+
+> Learn what kind of coworker AI actually is, and learn how to work with
+> it well.
+
+We expect that understanding to change as AI changes. So PRAOP must
+change too.
+
+## One Sentence
+
+> PRAOP is an evolving, case-driven practice for learning how humans and
+> probabilistic AI agents can work together reliably.
 
 ## License
 
-Content in this repository — cases, patterns, practices, playbooks, and
-protocol documents — is licensed under
-[Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
-Commercial use (consulting, training, product work) is explicitly
-permitted; publicly distributed derivatives of the materials themselves
-must carry the same license. The "Open PRAOP" name and any logo are
-**not** covered by this license — see `LICENSE` for the full scope,
-including what's excluded (trademark, raw/private evidence, third-party
-material) and the plan to license any future software tooling separately
-under Apache-2.0.
+Open PRAOP documentation, public cases, patterns, practices, and
+playbooks are released under
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), unless
+otherwise noted. Commercial use is explicitly permitted; publicly
+distributed derivatives of the materials themselves must carry the same
+license.
+
+The PRAOP name and associated branding are not granted as trademarks by
+that license.
+
+See `LICENSE` and `CONTRIBUTING.md` for details.
