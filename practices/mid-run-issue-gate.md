@@ -4,6 +4,12 @@
 **Enforcement Level:** Guidance
 **Anchor case(s):** `../cases/accepted/004-control-accretion-rerun.md`
 
+### Plain-Language Version (人话版)
+
+If you find a problem mid-run, ask one question first: does this break
+the run you're already doing? Yes → stop and fix it now. No → write it
+down and keep going.
+
 ### Problem Addressed
 
 Control Accretion / Control-Induced Drift — a verification or fix

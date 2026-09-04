@@ -14,6 +14,11 @@ Confidence and Status are tracked on two independent axes — see §9 of
 - **Confidence:** Observed → Emerging → Operational → Canonical
 - **Status:** Active / Contested / Deprecated
 
+Every pattern entry also carries a **Plain-Language Version (人话版)** —
+the Renhua principle in §3: if the person who owns the consequence can't
+get the point in ordinary language, the pattern hasn't passed the EDTCU
+Test yet, no matter how precise the formal definition is.
+
 ## Current patterns
 
 | Pattern | Confidence / Status | Anchor case(s) | Note |

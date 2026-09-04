@@ -185,6 +185,28 @@ contested. PRAOP is not intended to become a collection of permanent
 commandments. It is intended to remain an evolving body of operational
 knowledge.
 
+## Speak Human
+
+AI can generate abstraction faster than humans can absorb it. Fluency is
+not understanding.
+
+PRAOP therefore requires important claims, risks, and practices to be
+explainable in ordinary language to the person who owns the consequence.
+If we cannot explain it simply, we do not yet treat it as
+organizationally understood.
+
+We call this principle **Renhua (人话)** — kept in Chinese rather than
+fully translated, because the phrase carries an attitude that "plain
+language" alone doesn't quite capture: don't let terminology, or fluent
+AI output, stand in for real understanding. Every Pattern, Practice, and
+Playbook in this repo carries a Plain-Language Version for exactly this
+reason.
+
+The stress test for it is called **EDTCU** — Even Donald Trump Can
+Understand. Deliberately humorous, not a political statement: if an idea
+can't survive being explained that plainly, we don't yet trust that
+anyone actually understands it. Also called EddieQ.
+
 ## A Different Kind of Guardrail
 
 AI safety and AI security often focus on the model or system itself:

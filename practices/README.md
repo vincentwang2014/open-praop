@@ -19,6 +19,10 @@ Don't claim Process or Mechanical Enforcement for something that's
 actually just Guidance — that's exactly the "Knowledge Is Not
 Enforcement" gap §3 of the protocol warns about.
 
+Every practice also carries a **Plain-Language Version (人话版)** — same
+Renhua / EDTCU Test requirement as Patterns. If it can't be said plainly,
+it isn't ready to be called a Practice yet.
+
 ## Current practices
 
 | Practice | Confidence / Status | Enforcement | Anchor case |

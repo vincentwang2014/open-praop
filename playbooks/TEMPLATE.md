@@ -6,6 +6,11 @@ Copy this file, fill it in, remove these instructions.
 
 E.g. "Vibe Coding Team Starter Playbook."
 
+### Plain-Language Version (人话版)
+
+One or two sentences, ordinary language: what does this playbook make a
+team actually do? Same EDTCU Test as everything else in this repo.
+
 ### Who Is This For?
 
 Describe the typical user.
