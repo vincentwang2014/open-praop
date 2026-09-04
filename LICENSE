@@ -1,0 +1,82 @@
+Open PRAOP — Cases, Patterns, Practices, Playbooks, and Protocol Documents
+Copyright (c) 2026 Open PRAOP contributors
+
+This work is licensed under the Creative Commons Attribution-ShareAlike
+4.0 International License (CC BY-SA 4.0).
+
+You are free to:
+
+  Share    — copy and redistribute the material in any medium or format
+  Adapt    — remix, transform, and build upon the material
+
+for any purpose, including commercially, under the following terms:
+
+  Attribution — You must give appropriate credit, provide a link to the
+  license, and indicate if changes were made. You may do so in any
+  reasonable manner, but not in any way that suggests the licensor
+  endorses you or your use.
+
+  ShareAlike — If you remix, transform, or build upon the material, you
+  must distribute your contributions under the same license as the
+  original.
+
+No additional restrictions — You may not apply legal terms or
+technological measures that legally restrict others from doing anything
+the license permits.
+
+Full legal text:
+https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+Human-readable summary:
+https://creativecommons.org/licenses/by-sa/4.0/
+
+---
+
+## Scope
+
+This license covers the content of this repository as published here —
+case write-ups, patterns, practices, playbooks, and protocol documents.
+
+**Commercial use is explicitly permitted.** You may use Open PRAOP
+materials in paid consulting, training, internal implementation, or
+product work. If you publicly distribute a modified version of the
+Open PRAOP materials themselves, that modified version must carry the
+same CC BY-SA 4.0 license — improvements to the shared corpus stay
+shared.
+
+## What is NOT covered by this license
+
+- **The "PRAOP" / "Open PRAOP" name and any associated logo or
+  trademark.** CC BY-SA covers the content, not the brand. You may fork
+  and adapt the material and describe your work as "based on Open
+  PRAOP," but you may not represent your fork or derivative as the
+  official Open PRAOP project, an official certification, or an
+  official Open PRAOP-branded framework.
+- **Raw / private evidence.** Internal logs, original transcripts, full
+  customer or company records, and any other unredacted source material
+  are never covered by this license, whether or not they're referenced
+  by an accepted case. Only material actually published in this public
+  repository, and marked as the redacted/public version, is licensed
+  here.
+- **Third-party material quoted or referenced by a case** (e.g. a
+  linked Reddit post, paper, or screenshot from an External Case, per
+  §16 of the protocol). Inclusion in a case write-up does not relicense
+  that third-party content — it remains under whatever terms its
+  original source carries.
+- **Future software components.** If Open PRAOP later ships tooling
+  (a CLI, a de-identification scanner, preflight/validation tools,
+  etc.), those are expected to ship under a separate permissive license
+  (Apache License 2.0 is the current plan, for its explicit patent
+  grant) rather than under CC BY-SA — code and open-content licensing
+  serve different purposes and shouldn't be forced under one license.
+
+## Contributions
+
+By submitting a contribution (a case, practice, playbook, or edit) for
+inclusion in this repository, you represent that you have the right to
+submit it, and you agree that, if accepted, it may be distributed under
+CC BY-SA 4.0 on the same terms as the rest of this repository. You
+retain the rights to your own original contribution; this is a license
+grant to the project, not a transfer of ownership. See `CONTRIBUTING.md`.
+
+This license does not constitute legal, compliance, or safety advice.
