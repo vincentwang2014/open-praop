@@ -90,9 +90,11 @@ deliberately rather than fully translated, because the term carries an
 attitude ("don't let terminology and fluent AI output stand in for real
 understanding") that "Plain Language" alone doesn't fully capture. Three
 layers: Renhua is the principle, a Plain-Language Version is the
-practice, and the **EDTCU Test** — Even Donald Trump Can Understand, a
-deliberately humorous stress test, also called EddieQ — is how it's
-checked. Comes with an explicit Evidence → Interpretation →
+practice, and the stress test is how it's checked — called **EDTCU**
+(Even Donald Trump Can Understand), **Eddie-Q**, or **EQ**
+interchangeably, three names for the same test (EQ here meaning the
+test, not emotional intelligence). Comes with an explicit Evidence →
+Interpretation →
 Plain-language explanation (Renhua) → Human understanding →
 Decision/ownership chain explaining *why* it matters (semantic
 ownership, not writing style). It now also constrains content, not just
@@ -275,18 +277,24 @@ PRAOP 把 Renhua 拆成三层：
 * **Plain-language explanation** — 实践方式：每一条 Pattern、Practice、
   Playbook 都必须附带一个 **Plain-Language Version（人话版）** 字段，
   用普通话把它讲清楚——见 §5、§6 对应的模板字段。
-* **EDTCU** — 具体的 stress test。
+* **EDTCU / Eddie-Q / EQ** — 具体的 stress test，同一件事的三种叫法。
 
 > **EDTCU is the stress test for Renhua.**
 >
-> EDTCU — Even Donald Trump Can Understand. A deliberately humorous
-> plain-language test: if an important idea cannot be explained in
-> ordinary, concrete language, we should not assume it is
-> organizationally understood.
+> EDTCU — Even Donald Trump Can Understand. Also informally called
+> **Eddie-Q**, or simply **EQ**. All three refer to the same PRAOP
+> plain-language test — use whichever reads best in context: EDTCU for
+> the origin story, Eddie-Q for casual discussion, EQ for checklists
+> and review comments (e.g. "EQ: Pass").
+>
+> A deliberately humorous plain-language test: if an important idea
+> cannot be explained in ordinary, concrete language, we should not
+> assume it is organizationally understood.
 
 **关于这个名字：** EDTCU 借用一个知名度极高、说话风格极简直接的公众人物
 作为记忆点，不代表任何政治立场，也不是在评价这个人本身——重点始终是
-"能不能把话说到几乎所有人都听得懂"。社区里也常把它简称为 **EddieQ**。
+"能不能把话说到几乎所有人都听得懂"。**注意：这里的 EQ 指这个 plain-
+language test，不是情商（emotional intelligence）。**
 
 PRAOP 因此把"理解"拆成一条链：
 

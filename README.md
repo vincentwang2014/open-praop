@@ -202,10 +202,13 @@ AI output, stand in for real understanding. Every Pattern, Practice, and
 Playbook in this repo carries a Plain-Language Version for exactly this
 reason.
 
-The stress test for it is called **EDTCU** — Even Donald Trump Can
-Understand. Deliberately humorous, not a political statement: if an idea
-can't survive being explained that plainly, we don't yet trust that
-anyone actually understands it. Also called EddieQ.
+The stress test for it goes by three interchangeable names — pick
+whichever fits: **EDTCU** (Even Donald Trump Can Understand — the origin
+story), **Eddie-Q** (for casual discussion — "this fails Eddie-Q"), or
+**EQ** (short form for checklists and review comments — "EQ: Pass"; not
+emotional intelligence). Deliberately humorous, not a political
+statement: if an idea can't survive being explained that plainly, we
+don't yet trust that anyone actually understands it.
 
 ## A Different Kind of Guardrail
 
