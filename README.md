@@ -1,6 +1,6 @@
 # Open PRAOP
 
-*Probabilistic Reliability Operations Practice*
+*Probabilistic Reliability AI Operations Practice*
 
 PRAOP is an open, case-driven practice for learning how humans and AI
 systems can work together reliably.
