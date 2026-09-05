@@ -214,15 +214,27 @@ Open PRAOP 遵守几个最小原则。
 
 先记录发生了什么，再讨论理论。
 
+人话：
+
+> 先说发生了什么，道理以后再聊。
+
 ### Assert Incidents, Hedge Abstractions
 
 已经观察到的事实可以明确说。
 
 从案例抽象出的机制、规律和普遍性必须注明不确定性。
 
+人话：
+
+> 发生过的事可以说死；总结出来的规律别装成定律。
+
 ### Artifact > Memory
 
 日志、输出、commit、截图、邮件、运行结果等实际 evidence，优先于人的记忆，也优先于 AI 对自己行为的解释。
+
+人话：
+
+> 能看日志、代码、commit，就别靠"我记得"。
 
 ### No Fit Is Valid
 
@@ -238,11 +250,19 @@ Open PRAOP 遵守几个最小原则。
 
 一个解释所有事情的 taxonomy 没有研究价值。
 
+人话：
+
+> 不是每个问题都非得塞进 PRAOP 已有的分类里。
+
 ### Knowledge Is Not Enforcement
 
 写进 README、CLAUDE.md、prompt 或 handbook，不等于实践已经稳定执行。
 
 Practice 和 Enforcement 必须区分。
+
+人话：
+
+> 知道这条规矩，不等于下次真的会照做。
 
 ### Renhua (人话)
 
@@ -274,10 +294,29 @@ Practice 和 Enforcement 必须区分。
 PRAOP 把 Renhua 拆成三层：
 
 * **Renhua / 人话** — 原则本身。
-* **Plain-language explanation** — 实践方式：每一条 Pattern、Practice、
-  Playbook 都必须附带一个 **Plain-Language Version（人话版）** 字段，
-  用普通话把它讲清楚——见 §5、§6 对应的模板字段。
+* **Plain-language explanation** — 实践方式：见下方"谁必须有人话版"。
 * **EDTCU / Eddie-Q / EQ** — 具体的 stress test，同一件事的三种叫法。
+
+**谁必须有人话版：**
+
+* **Principle**（本节 §3 各条原则）— 必须（Required）。
+* **Pattern**（§2.2）— 必须（Required）。
+* **Practice**（§5）— 必须（Required）。
+* **Playbook**（§6）— 必须（Required）。
+* **Accepted Case**（§9 Case Status）— 应该（Should），由 maintainer 在
+  Accept 阶段补上（见 §13 Step 6），不是 contributor 的责任。
+* **Raw case submission**（§4）— 不要求（Not required）。Contributor 的
+  责任只是"报告事件"（见 §4）；人话版是 maintainer 把它处理成
+  structured case 之后才补的东西，不能反过来变成提交门槛。
+
+一条额外约束：
+
+> **Plain-language version should explain the idea, not summarize the
+> jargon.**
+
+人话版是在把这件事解释清楚，不是把术语逐字换成更短的说法再抄一遍。读
+起来像"翻译腔简化版"——只是把英文词换成对应的中文词——就还没有真正通过
+EDTCU Test。
 
 > **EDTCU is the stress test for Renhua.**
 >
@@ -338,6 +377,11 @@ Contributor 的责任是：
 Maintainer 的责任是：
 
 > **解释和分类事件。**
+
+这也包括人话版规则：raw submission **不要求** Plain-Language Version
+（见 §3"谁必须有人话版"）——contributor 不需要写它。案例 Accept 之后，
+maintainer 在处理成 structured case 时"应该"补上一个（见 §9 Accepted、
+§13 Step 6）。
 
 ## Case Submission Template
 
@@ -801,6 +845,10 @@ Case 和 Pattern/Practice 不应使用完全相同的晋升逻辑。
 
 事件本身足够清楚，可以进入案例库。
 
+进入这个状态后，应该（不是必须，但推荐）补上一个 Plain-Language
+Version（人话版），由 maintainer 在处理时写，不需要 contributor
+提供（见 §3"谁必须有人话版"、§13 Step 6）。
+
 ### Disputed
 
 关键事实存在重大争议。
@@ -990,7 +1038,13 @@ v0.1 暂时不要建立：
 * automated taxonomy engine；
 * complicated governance hierarchy；
 * large ontology；
-* dozens of issue labels。
+* dozens of issue labels；
+* 公开的 `drafts/` 或 `case-drafts/` 目录。Private working draft（例如
+  `praop-case-draft` 这类工具的输出）不应该出现在这个 repo 里，无论审核
+  没审核。这个 repo 只应该看到两类 case 内容：已经完成 de-identification
+  和 combination-risk check、正在等待 review 的 submission（PR 本身就是
+  这个 review surface），以及已经 `Accepted` 进入 `cases/accepted/` 的
+  case。没有中间的"公开草稿区"。
 
 先观察真实使用。
 
@@ -1014,6 +1068,12 @@ Submit PR or Issue
         ↓
 Maintainer review
 ```
+
+**这个顺序不能反过来。** De-identification 发生在 PR 存在之前，不是在
+PR 的 review 过程里才做。GitHub PR（连同它的评论历史）一旦打开就是公开
+的——之后 close 或 reject 都不会让它变回不公开。不要为了"先拿到反馈"就
+把还没通过 de-identification 和 combination-risk check 的草稿开成 PR；
+先在私有草稿上做完这一步，再把已经脱敏的内容放进 PR。
 
 最重要：
 
@@ -1043,6 +1103,10 @@ Hypothetical content 不进入 Case Canon。
 
 ## Step 2 — Privacy / De-identification
 
+这是安全网检查，不是 de-identification 本应该发生的地方——那应该在
+contributor 打开 PR **之前**就做完（见 §12）。这一步是确认它确实做到
+位了，而不是替代它。
+
 检查是否仍存在：
 
 * PII；
@@ -1050,7 +1114,10 @@ Hypothetical content 不进入 Case Canon。
 * proprietary details；
 * re-identification risk。
 
-不安全则退回修改。
+不安全则退回修改。**但 PR 已经公开过这件事本身不会撤销**——如果这一步
+发现的问题足够严重（真实姓名、凭证、可定位到具体个人或客户的细节），
+除了退回修改，还要考虑是否需要请 contributor 删除该 PR 并联系 GitHub
+支持处理已经公开过的内容，而不是只当作"改好再提交"处理。
 
 ---
 
@@ -1105,6 +1172,11 @@ Case 可以 Accepted。
 也就是说：
 
 > Accepting evidence ≠ accepting theory.
+
+Accept 的同时，maintainer 应该补一个 Plain-Language Version（人话
+版）——一两句话讲清楚"这件事到底是什么"，不是重新证明它，也不是把
+taxonomy apply 上去。这是 Accepted Case 唯一需要 maintainer 主动补的
+字段（见 §3"谁必须有人话版"）。
 
 ---
 

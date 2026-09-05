@@ -9,6 +9,19 @@ execution in a cloud GPU environment)
 system provided architect-role commentary afterward.
 **Maps to:** `../../patterns/control-accretion.md` (Observed / Active)
 
+### Plain-Language Version (人话版)
+
+*Added by maintainer, per protocol §9 (Accepted cases should carry
+one).*
+
+A same-day rerun of an already-decided experiment turned into most of
+a working day. Every safety check added along the way was individually
+justified — each one caught a real bug — but the checks kept changing
+the exact thing they were supposed to be verifying, so each fix
+triggered another round of re-verification. No single step was wrong;
+the loop came from checking the work and doing the work no longer
+staying separate.
+
 > Exported from a private pilot run that validated the Open PRAOP
 > submission pipeline before this repo existed. De-identified per
 > `../../protocol/open-praop-v0.1-final.md` §7 — the project codename, the
