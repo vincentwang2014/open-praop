@@ -265,9 +265,10 @@ evidence levels, promotion rules) lives in
 
 Open PRAOP defines the practice. Want to apply it inside a live
 AI-assisted project instead of only reconstructing it after an incident?
-See `implementations/` — pointers to companion tools that implement
-these practices, each living in its own repo so this one stays focused
-on the corpus and protocol.
+See [PRAOP Project Skill](https://github.com/vincentwang2014/praop-project-skill)
+— a companion tool that implements these practices as a project operating
+discipline. More implementations, each living in its own repo so this one
+stays focused on the corpus and protocol, are indexed in `implementations/`.
 
 You do not need to understand PRAOP terminology to contribute. If
 something interesting happened while you were working with AI, tell us
