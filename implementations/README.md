@@ -19,4 +19,4 @@ sight.
 
 | Implementation | What it does | Repo |
 |---|---|---|
-| PRAOP Project Skill | Session-start/session-end handoff discipline for AI-assisted project work | [praop-project-skill](https://github.com/vincentwang2014/praop-project-skill) |
+| PRAOP Project Skill | A behavioral operating kernel plus a four-file memory/handoff discipline for AI-assisted project work | [praop-project-skill](https://github.com/vincentwang2014/praop-project-skill) |
