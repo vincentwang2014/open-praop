@@ -63,3 +63,13 @@ rather than something specific to one kind of tool.
 None yet. The anchor case's own §K ("default to minimal necessary
 context, not maximal — resist the intuition that more information will
 help") is a first candidate, untested as a formal Practice.
+
+## Case Anchors
+
+- Case 006 — Primary anchor
+
+## Related Cases
+
+- A second, independent-environment incident referenced in
+  `../PLAIN_LANGUAGE_GUIDE.md` Entry 1 (case ②) — not yet
+  independently submitted/Accepted.

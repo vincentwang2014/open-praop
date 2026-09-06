@@ -63,3 +63,15 @@ None yet. The anchor case's own §K ("execute optimistically, verify
 skeptically" — check the actual resulting state in the same session
 rather than trusting a status report) is a first candidate, untested
 as a formal Practice.
+
+## Case Anchors
+
+- Case 004 — Primary anchor
+
+## Related Cases
+
+- 3 further known incidents referenced in
+  `../PLAIN_LANGUAGE_GUIDE.md` Entry 2 (including the bankruptcy-
+  carryover case, which also relates to "Inference Never Silently
+  Commits" — one incident, two lenses, not two anchors) — not yet
+  independently submitted/Accepted.

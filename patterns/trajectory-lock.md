@@ -73,3 +73,13 @@ environment.
 None yet. The anchor case's own §K ("when a fix works and then fails
 again shortly after, treat that as a signal to question the original
 diagnosis") is a first candidate, untested as a formal Practice.
+
+## Case Anchors
+
+- Case 005 — Primary anchor (itself documents 2 incidents; see "Why
+  this stays at Observed" above for the open question on whether the
+  second counts toward `Emerging` on its own)
+
+## Related Cases
+
+None beyond what Case 005 itself already documents.

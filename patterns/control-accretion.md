@@ -59,3 +59,11 @@ managing this failure mode (untested against a second instance).
 reason Open PRAOP's own governance rules are deliberately kept minimal —
 the same accretion mechanism this pattern describes in engineering work
 can happen to a review process instead.
+
+## Case Anchors
+
+- Case 002 — Primary anchor
+
+## Related Cases
+
+None known yet.
