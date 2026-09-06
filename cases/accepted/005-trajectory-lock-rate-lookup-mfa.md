@@ -7,10 +7,10 @@
 third-party integration, small-business production system
 **AI system involved:** A coding agent driving both the debugging
 process and the automation being debugged
-**Maps to:** candidate Pattern **Trajectory Lock** — not yet in
-`../../patterns/` (this is its primary anchor; see
-`PLAIN_LANGUAGE_GUIDE.md` Entry 12 for a second, smaller, independent
-same-week incident of the same shape, described inline in this case)
+**Maps to:** `../../patterns/trajectory-lock.md` (Observed / Active)
+— this is its primary anchor; see `PLAIN_LANGUAGE_GUIDE.md` Entry 12
+for a second, smaller, independent same-week incident of the same
+shape, described inline in this case
 
 ### Plain-Language Version (人话版)
 
@@ -213,10 +213,11 @@ and behavior before assuming an external cause.
   independent incidents in a single submission (the three-week saga and
   the same-week search-bug incident). Anti-mapping question is credible
   — distinguishes from "just a hard bug."
-- **Confidence:** Case accepted; the pattern itself does not yet exist
-  in `patterns/` — writing that file is the next step, out of scope for
-  this admission. Whether the two incidents described in this one case
-  file satisfy §10's "second independent incident" bar for `Emerging`
-  (rather than being treated as one Accepted anchor) is a judgment call
-  to make explicitly when the pattern file itself is drafted, not
-  assumed here.
+- **Confidence:** Case accepted; the pattern now exists at
+  `../../patterns/trajectory-lock.md`, `Observed / Active` with this
+  case as its primary anchor. Whether the two incidents described in
+  this one case file satisfy §10's "second independent incident" bar
+  for `Emerging` (rather than being treated as one Accepted anchor)
+  remains an open judgment call, explicitly flagged in the pattern
+  file itself for the maintainer's decision — not resolved here or
+  there.
