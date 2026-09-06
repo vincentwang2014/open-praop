@@ -13,15 +13,13 @@ environment)
 *Added by maintainer, per protocol §9 (Accepted cases should carry
 one).*
 
-The agent had already been told a repo credential was standing,
-established context — no need to repeat it. It repeated it anyway,
-four times. Right after finally writing a fix for that ("stop
-mentioning the credential"), it did the opposite: ran a git command
-against the same private remote with no credential at all, and got the
-environment's startup stuck. The fix targeted "said too much"; the
-fact that actually mattered was "when this credential is needed" —
-that never got written down, so the same fact broke the run again from
-the other side.
+The AI had already been told about a password it could use whenever it
+needed to reach a certain private system — settled, no need to mention
+it again. It kept explaining the password anyway, four separate times.
+Once it was told to stop talking about it, it swung the other way: the
+very next time it actually needed that password, it didn't use it at
+all, and the task got stuck. It had learned "don't talk about it" —
+but never learned the real lesson, which was "know when you need it."
 
 > Exported from a private pilot run that validated the Open PRAOP
 > submission pipeline before this repo existed. De-identified per

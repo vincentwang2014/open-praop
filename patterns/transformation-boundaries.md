@@ -5,10 +5,10 @@
 
 ### Plain-Language Version (人话版)
 
-Whenever information has to change shape — free text into structured
-data, one system's schema into another's — meaning can quietly fall
-out at the crossing, even though every side of that crossing looks
-correct on its own.
+Something can be understood correctly the moment it's said, and still
+get lost somewhere between one system and the next. Every step along
+the way can look like it worked fine, while the one detail that
+actually mattered quietly disappears in between.
 
 ## What it is
 
