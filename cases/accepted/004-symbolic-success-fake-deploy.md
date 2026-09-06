@@ -132,6 +132,12 @@ production" as two separate claims requiring two separate checks.
 
 ---
 
+## Pattern Mapping
+
+- Symbolic Success ≠ Operational Correctness (`patterns/symbolic-success.md`) — Supports (Primary anchor)
+
+---
+
 ### Maintainer review notes
 
 - **Real enough:** firsthand, contemporaneous incident with a specific

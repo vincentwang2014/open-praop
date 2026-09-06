@@ -138,6 +138,12 @@ instance. See `../../practices/mid-run-issue-gate.md`.
 
 ---
 
+## Pattern Mapping
+
+- Control Accretion (`patterns/control-accretion.md`) — Supports (Primary anchor)
+
+---
+
 ### Maintainer review notes
 
 - **Real enough:** firsthand, contemporaneous write-up. Passes.

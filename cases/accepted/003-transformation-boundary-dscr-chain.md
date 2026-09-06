@@ -200,6 +200,12 @@ untested.
 
 ---
 
+## Pattern Mapping
+
+- Transformation Boundaries (`patterns/transformation-boundaries.md`) — Supports (Primary anchor)
+
+---
+
 ### Maintainer review notes
 
 - **Real enough:** firsthand, contemporaneous incident with a concrete

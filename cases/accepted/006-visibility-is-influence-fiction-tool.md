@@ -135,6 +135,16 @@ as the first fix to try, not the last.
 
 ---
 
+## Pattern Mapping
+
+- Visibility Is Influence (`patterns/visibility-is-influence.md`) — Supports (Primary anchor)
+
+Notes: informally related to "Probabilistic, Not a Rule Engine"
+(`PLAIN_LANGUAGE_GUIDE.md` Entry 6) — no formal Pattern file exists for
+that idea yet, so it isn't recorded as a Pattern Mapping relation.
+
+---
+
 ### Maintainer review notes
 
 - **Real enough:** firsthand, contemporaneous incident with a specific,

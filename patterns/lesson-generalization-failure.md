@@ -56,3 +56,11 @@ explicitly ask what the general risk class is, not just the literal
 symptom of the complaint — before finalizing the wording. Test the fix
 against the opposite-direction failure, not just a repeat of the
 same-direction one.
+
+## Case Anchors
+
+- Case 001 — Primary anchor
+
+## Related Cases
+
+None known yet.

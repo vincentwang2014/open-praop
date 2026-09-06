@@ -62,3 +62,18 @@ boundary despite every individual side's own checks passing.
 None yet. The anchor case's own §K (schema-diff-style audit for every
 pair of adjacent layers) is a first candidate, untested against a
 second instance — not yet promoted to `../practices/`.
+
+## Case Anchors
+
+- Case 003 — Primary anchor
+
+## Related Cases
+
+- Sub-events from the same-day source cluster that produced Case 003
+  are under review (2026-09-06): one (context-window truncation
+  silently dropping stated facts) is anticipated as **Partial** once
+  formally submitted, not yet a Case; another (a same-mechanism
+  recurrence before the underlying fix shipped) is expected to be
+  recorded as recurrence evidence on Case 003 itself, not a second
+  independent anchor — see Case 003's own Pattern Mapping / Maintainer
+  review notes once that's done.

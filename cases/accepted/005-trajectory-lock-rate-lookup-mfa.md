@@ -181,6 +181,12 @@ and behavior before assuming an external cause.
 
 ---
 
+## Pattern Mapping
+
+- Trajectory Lock (`patterns/trajectory-lock.md`) — Supports (Primary anchor)
+
+---
+
 ### Maintainer review notes
 
 - **Real enough:** firsthand, contemporaneous incident with a concrete
