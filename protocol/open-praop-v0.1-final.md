@@ -1249,8 +1249,93 @@ Case 可以 Accepted。
 
 Accept 的同时，maintainer 应该补一个 Plain-Language Version（人话
 版）——一两句话讲清楚"这件事到底是什么"，不是重新证明它，也不是把
-taxonomy apply 上去。这是 Accepted Case 唯一需要 maintainer 主动补的
+分类套用上去。这是 Accepted Case 唯一需要 maintainer 主动补的
 字段（见 §3"谁必须有人话版"）。
+
+---
+
+## Step 6.5 — PRAOP Case Admission: the ACCEPT decision must be an artifact, not a conversation
+
+这条规则解决一个具体缺口：一个 submission 已经脱敏、已经开了 PR、
+maintainer 也确实读完了——但"maintainer 说了一句 OK"本身不是可审计的
+记录，它只存在于聊天记录里。Artifact > Memory 这条原则不应该在
+promotion 这一步失效。
+
+> **Human maintainer records ACCEPT in the submission artifact; only
+> then may an agent promote that submission into the Accepted Case
+> corpus.**
+
+人话：
+
+> 你拍板，文件留痕，AI 搬进去。
+
+### 状态机
+
+```text
+Draft → Submission → Reviewing → Accepted / Rejected / Revise
+```
+
+* **Draft** — 私有草稿，尚未脱敏，不进入公开 review。
+* **Submission** — 已完成脱敏和 combination-risk check，允许公开 review。
+* **Reviewing** — PR 已经打开，正在被讨论。
+* **Accepted** — maintainer 明确批准，进入正式 corpus。
+* **Rejected** — 不进入 corpus。
+* **Revise** — 退回 Submission 阶段修改。
+
+### Maintainer Review 区块（模板）
+
+每个 submission 文件的末尾附一个这样的区块，只有 maintainer 能改：
+
+```markdown
+## Maintainer Review
+
+- [ ] Incident is concrete
+- [ ] De-identification is sufficient
+- [ ] Combination-risk checked
+- [ ] Evidence level is honest
+- [ ] Interpretation is separated from observation
+- [ ] Anti-mapping is credible
+- [ ] No duplicate underlying incident is being counted as independent
+
+**Decision:** [ pending ]
+Reviewed by:
+Review date:
+```
+
+只有当 **Decision** 这一行明确写着 **ACCEPT** 时，agent 才被允许把这份
+submission 提升为正式 Case：分配 Case ID、移动到 `cases/accepted/`、
+把 Status 改成 Accepted、保留原 submission 的 provenance、commit。
+在那之前，无论对话里说了多少次"这个可以了"，agent 都不得自行提升。
+
+### Case Acceptance 和 Pattern Promotion 必须分开
+
+Accept 一个 Case，只代表这个 Case 本身进入了 corpus——**不代表**它
+所对应的 Pattern 自动升级：
+
+```text
+Case accepted
+      ↓
+Pattern 获得一个有效 anchor
+      ↓
+Pattern 的晋升资格被重新计算
+      ↓
+是否真的晋升，是另一次单独的决定
+```
+
+原因是同一个 underlying incident 可能同时说明好几个 Pattern（本
+protocol 多处已经强调：一个 incident 可以支撑好几种机制解读，但不能
+被偷偷算成好几个独立 anchor）。所以 agent 在 Case 被 Accept 之后，
+只能说：
+
+> Transformation Boundaries 现在有 1 个 Accepted anchor，够格重新评估
+> Observed 状态了。
+
+不能自己说：
+
+> Pattern 已晋升。
+
+那是一次独立的、需要单独触发的 promotion 决定，遵守 §10 的
+Anchor-or-Demote 规则，不会因为某个 Case 被 accept 就自动发生。
 
 ---
 
