@@ -26,7 +26,9 @@ Step 1 of the protocol).
 | 005 | Three Weeks Chasing a "Rate Limit" That Turned Out to Be a Twenty-Line Timeout Bug | E0 | Accepted | `patterns/trajectory-lock.md` |
 | 006 | A Long-Form Writing Tool Kept Repeating Earlier Scenes Once It Could See the Full Outline | E0 | Accepted | `patterns/visibility-is-influence.md` |
 | 007 | A Confidently Wrong Loan-Program Value Bypassed the Safeguard Built to Catch a Missing One | E0 | Accepted | none — Challenges `patterns/transformation-boundaries.md`, considered and rejected as a fit |
+| 008 | A Hardcoded Schema Default Silently Outranked What the Broker Actually Said | E0 | Accepted | none — Challenges `patterns/transformation-boundaries.md`, considered and rejected as a fit |
+| 009 | A Truncated Conversation Window Made the System Re-Ask Something a Customer Had Already Answered; the Customer Soon Opted Out | E0 | Accepted | none (anchor) — Partial fit on `patterns/transformation-boundaries.md`, an open classification question, not settled either way |
 
-All seven are E0 (self-reported, no attached artifact) — accepted
+All nine are E0 (self-reported, no attached artifact) — accepted
 anyway, tagged honestly rather than inflated. See each case file's
 provenance note for why.

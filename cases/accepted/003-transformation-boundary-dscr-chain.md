@@ -8,8 +8,8 @@ pipeline, small-business production system)
 **AI system involved:** A lightweight LLM used for natural-language
 extraction (one stage of a multi-stage pipeline); a separate coding
 agent diagnosed the incident after the fact.
-**Maps to:** candidate Pattern **Transformation Boundaries** — not yet
-in `../../patterns/` (this is its anchor case)
+**Maps to:** `../../patterns/transformation-boundaries.md` (Observed /
+Active) — this is its anchor case
 
 ### Plain-Language Version (人话版)
 
@@ -231,10 +231,11 @@ untested.
 - **Mapping:** New pattern candidate, **Transformation Boundaries**.
   Anti-mapping question is credible and specific (distinguishes from
   "just needed better integration tests").
-- **Confidence:** Case accepted; the pattern itself does not yet exist
-  in `patterns/` — writing that file is the next step, out of scope for
-  this admission (anchor-gate discipline: a pattern only gets written
-  once at least one case backing it is genuinely Accepted). Per §10,
-  it would start at `Observed` with exactly one Accepted anchor,
-  regardless of the source material's claim of two further
-  independently-observed instances — those aren't yet formal submissions.
+- **Confidence:** Case accepted; the pattern now exists at
+  `../../patterns/transformation-boundaries.md`, `Observed / Active`
+  with this case as its anchor. Per §10, it stays at `Observed` with
+  exactly one Accepted anchor, regardless of the source material's
+  original claim of two further independently-observed instances —
+  one of those (Case 009) has since been formally submitted and
+  Accepted, but as a Partial fit, not a second anchor; see Case 009 and
+  this pattern's own Related Cases section.
