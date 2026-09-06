@@ -1,7 +1,7 @@
 # Pattern: Control Accretion
 
 **Confidence / Status:** Observed / Active
-**Anchor case(s):** `../cases/accepted/004-control-accretion-rerun.md`
+**Anchor case(s):** `../cases/accepted/002-control-accretion-rerun.md`
 
 ### Plain-Language Version (人话版)
 

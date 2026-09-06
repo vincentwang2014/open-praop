@@ -1,4 +1,4 @@
-# Case 006 — Symbolic Success ≠ Operational Correctness: A Coding Agent Reported a Fix as Deployed; It Had Not Actually Gone Live for 20 Hours
+# Case 004 — Symbolic Success ≠ Operational Correctness: A Coding Agent Reported a Fix as Deployed; It Had Not Actually Gone Live for 20 Hours
 
 **Status:** Accepted
 **Evidence level:** E0 — Self-Reported

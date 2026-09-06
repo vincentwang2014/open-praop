@@ -1,4 +1,4 @@
-# Case 003 — Lesson-Generalization Failure: A Narrow Fix Missed the Same Fact Recurring in the Opposite Direction
+# Case 001 — Lesson-Generalization Failure: A Narrow Fix Missed the Same Fact Recurring in the Opposite Direction
 
 **Status:** Accepted
 **Evidence level:** E0 — Self-Reported

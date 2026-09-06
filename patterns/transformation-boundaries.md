@@ -1,7 +1,7 @@
 # Pattern: Transformation Boundaries
 
 **Confidence / Status:** Observed / Active
-**Anchor case(s):** `../cases/accepted/005-transformation-boundary-dscr-chain.md`
+**Anchor case(s):** `../cases/accepted/003-transformation-boundary-dscr-chain.md`
 
 ### Plain-Language Version (人话版)
 
