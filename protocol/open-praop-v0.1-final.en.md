@@ -46,7 +46,7 @@ by this draft.
 Scope for v0.1-final was deliberately held to these four items — no
 committee, no automated scoring, no reviewer reputation, no certification.
 Adding those now would repeat the exact failure shape (Control Accretion,
-Case 004) these safeguards exist to catch.
+Case 002) these safeguards exist to catch.
 
 **Post-convergence refinement pass (2026-09-04, still v0.1-final):** two
 internal wording/logic gaps found on read-through, both closed without
@@ -1695,7 +1695,7 @@ its wording is.
 Continuously adding contributor friction in the name of keeping the
 repo "rigorous," until eventually nobody wants to submit anything.
 
-→ **Anchored in Case 004: The Rerun That Became a New Experiment.** A
+→ **Anchored in Case 002: The Rerun That Became a New Experiment.** A
 reliability layer built to audit a rerun gradually started changing
 the very state it was supposed to be auditing, and eventually inflated
 a routine repeat experiment into a full engineering project — every

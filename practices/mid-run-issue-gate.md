@@ -2,7 +2,7 @@
 
 **Confidence / Status:** Observed / Active
 **Enforcement Level:** Guidance
-**Anchor case(s):** `../cases/accepted/004-control-accretion-rerun.md`
+**Anchor case(s):** `../cases/accepted/002-control-accretion-rerun.md`
 
 ### Plain-Language Version (人话版)
 
@@ -42,7 +42,7 @@ signed off on (e.g. a commit pin) without explicitly re-triggering
 
 ### Evidence
 
-- Case 004 (`../cases/accepted/004-control-accretion-rerun.md`) — 1
+- Case 002 (`../cases/accepted/002-control-accretion-rerun.md`) — 1
   anchor, E0.
 
 ### Known Limitations

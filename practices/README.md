@@ -27,4 +27,4 @@ it isn't ready to be called a Practice yet.
 
 | Practice | Confidence / Status | Enforcement | Anchor case |
 |---|---|---|---|
-| Mid-Run Issue Gate: Block vs. Backlog | Observed / Active | Guidance | Case 004 |
+| Mid-Run Issue Gate: Block vs. Backlog | Observed / Active | Guidance | Case 002 |

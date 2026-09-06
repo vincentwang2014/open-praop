@@ -40,7 +40,7 @@ project's own prior tiering system, not just gaps introduced by this draft.
 Scope for v0.1-final was deliberately held to these four items — no
 committee, no automated scoring, no reviewer reputation, no certification.
 Adding those now would repeat the exact failure shape (Control Accretion,
-Case 004) these safeguards exist to catch.
+Case 002) these safeguards exist to catch.
 
 **Post-convergence refinement pass (2026-09-04, still v0.1-final):** two
 internal wording/logic gaps found on read-through, both closed without
@@ -1517,7 +1517,7 @@ Open PRAOP 所依托的这个项目已经真实经历过其中一些失败形态
 
 为了保证 repo "严谨"，不断增加 contributor friction，最后没人愿意提交。
 
-→ **锚定于 Case 004：The Rerun That Became a New Experiment.** 一次为了
+→ **锚定于 Case 002：The Rerun That Became a New Experiment.** 一次为了
 审计 rerun 而搭建的可靠性层，逐步开始改动它本该审计的状态，最终把一次
 重复实验膨胀成一个完整的工程项目——每一步局部看都合理。Open PRAOP v0.1
 本身在收敛这四项修复时，也刻意把范围锁在这四项、拒绝顺势扩写成二十条

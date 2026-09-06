@@ -1,4 +1,4 @@
-# Case 004 — Control Accretion: A Rerun That Became a New Experiment
+# Case 002 — Control Accretion: A Rerun That Became a New Experiment
 
 **Status:** Accepted
 **Evidence level:** E0 — Self-Reported

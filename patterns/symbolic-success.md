@@ -1,7 +1,7 @@
 # Pattern: Symbolic Success ≠ Operational Correctness
 
 **Confidence / Status:** Observed / Active
-**Anchor case(s):** `../cases/accepted/006-symbolic-success-fake-deploy.md`
+**Anchor case(s):** `../cases/accepted/004-symbolic-success-fake-deploy.md`
 
 ### Plain-Language Version (人话版)
 

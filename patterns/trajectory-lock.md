@@ -1,7 +1,7 @@
 # Pattern: Trajectory Lock
 
 **Confidence / Status:** Observed / Active
-**Anchor case(s):** `../cases/accepted/007-trajectory-lock-rate-lookup-mfa.md`
+**Anchor case(s):** `../cases/accepted/005-trajectory-lock-rate-lookup-mfa.md`
 
 ### Plain-Language Version (人话版)
 
