@@ -129,6 +129,12 @@ remembering a narrated instruction.
 
 ---
 
+## Pattern Mapping
+
+- Lesson-Generalization Failure (`patterns/lesson-generalization-failure.md`) — Supports (Primary anchor)
+
+---
+
 ### Maintainer review notes
 
 - **Real enough:** firsthand, contemporaneous write-up. Passes.

@@ -76,6 +76,15 @@ What kind of problem do you think this might be? (Existing Open PRAOP
 pattern / Maybe related / New pattern / No idea.) You are not responsible
 for the final classification.
 
+A Case can relate to more than one Pattern, and a Pattern can be
+supported by more than one Case — this is a many-to-many relationship,
+not a single classification. If your incident feels like it touches
+more than one existing Pattern, or none, say so here; you don't need to
+pick just one. The maintainer adds the formal **Pattern Mapping**
+section (candidate relations: Supports / Partial / Challenges) during
+review — this isn't something you need to fill in yourself, the same
+way the Plain-Language Version isn't.
+
 ---
 
 ## J. Anti-Mapping Question
