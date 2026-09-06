@@ -1,7 +1,7 @@
 # Pattern: Lesson-Generalization Failure
 
 **Confidence / Status:** Observed / Active
-**Anchor case(s):** `../cases/accepted/003-lesson-generalization-failure.md`
+**Anchor case(s):** `../cases/accepted/001-lesson-generalization-failure.md`
 
 ### Plain-Language Version (人话版)
 
