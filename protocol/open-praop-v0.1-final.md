@@ -296,6 +296,22 @@ Open PRAOP 遵守几个最小原则。
 
 > 不是每个问题都非得塞进 PRAOP 已有的分类里。
 
+### No New Axis Without Incidents
+
+不要因为某一个案例难以归类，就急着扩展分类体系本身。
+
+新增一个 taxonomy 维度（新字段、新分类轴、新 confidence 维度等）之前，
+需要能指出至少两个独立事件，证明现有维度确实表达不了；并且至少尝试过
+一次用现有手段绕过，且失败了。两者都指不出来，就不加——先把这个压力
+写成一条 observation，等下一个事件。
+
+这是「No Fit Is Valid」的镜像：那一条挡住的是把事件硬塞进已有分类；这
+一条挡住的是反过来，为了一个事件硬造一个新分类。
+
+人话：
+
+> 一个怪案例，不值得马上发明一个新分类。
+
 ### Knowledge Is Not Enforcement
 
 写进 README、CLAUDE.md、prompt 或 handbook，不等于实践已经稳定执行。
@@ -332,6 +348,22 @@ Practice 和 Enforcement 必须区分。
 组织里，AI 能流利地说出一整套术语，而真正对结果负责的人只能"嗯嗯，好像
 懂了"，那这个组织已经失去了一部分对自己决策的语义所有权——即使流程上看
 起来一切正常。
+
+**理解分两层，只有第二层才真正算数：** 第一层——有人讲给你听（或者 AI
+之间越聊越"高级"，术语来回飞），你点头"懂了"。这一层可以随时靠 AI 重新
+讲一遍来补，供应无限，因此也最不可靠。第二层——过一阵，一个全新的、
+没人提示的情况冒出来，你自己认出"这就是那个东西"，并且用它做了判断。
+只有第二层是真落地，而且它长得最慢，只能靠真事一次次砸、自己一次次用，
+慢慢长出来。
+
+> Passing Renhua means a human can later recognize and apply the idea
+> in a new situation without the AI prompting them — not that they
+> nodded along when it was explained.
+
+人话：
+
+> 当场点头"懂了"不算数。算数的是：以后遇到一个新情况，没人提醒，你自己
+> 认出这就是那个东西，并且用上了。
 
 PRAOP 把 Renhua 拆成三层：
 
