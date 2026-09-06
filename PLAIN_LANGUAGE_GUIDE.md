@@ -54,9 +54,11 @@ all). The cleanest safety isn't a warning in a tool's description; it's
 the information not being in front of the model. One caveat: this
 reduces the failure rate, it doesn't guarantee zero.
 
-**Formal status:** Pattern candidate — not yet in `patterns/`.
-Case ① is de-identified and submission-ready. Accepted anchor(s): none
-yet.
+**Formal status:** `Pattern — Observed / Active`. Now in
+`patterns/visibility-is-influence.md`. One Accepted anchor (Case 006,
+①). Case ② above is a second, independent-environment incident of the
+same shape, known but not yet independently submitted/Accepted — see
+the pattern file for what would move this to `Emerging`.
 
 ---
 
