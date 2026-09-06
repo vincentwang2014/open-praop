@@ -97,11 +97,11 @@ so it's checkable). **Execute optimistically, verify skeptically** —
 for any consequential action, check the actual resulting state, in the
 same session, rather than trusting "I did it."
 
-**Formal status:** Pattern candidate, under active review — the
-best-evidenced candidate found so far (multiple independent incidents
-across two separate source projects). Not yet in `patterns/`.
-Case ② is de-identified and submission-ready. Accepted anchor(s): none
-yet.
+**Formal status:** `Pattern — Observed / Active`. Now in
+`patterns/symbolic-success.md`. One Accepted anchor (Case 006, ②
+above); three further independently-observed incidents are known
+(including Case ① above) but not yet independently submitted/Accepted
+— see the pattern file for what would move this to `Emerging`.
 
 ---
 
@@ -462,10 +462,60 @@ diagnosis — not a cue to patch further within the same theory. Before
 building infrastructure around a suspected external constraint, verify
 the constraint actually exists.
 
-**Formal status:** Pattern candidate — not yet in `patterns/`. Two
-independent incidents (both above), both de-identified and
-submission-ready as one combined case file. Accepted anchor(s): none
-yet.
+**Formal status:** `Pattern — Observed / Active`. Now in
+`patterns/trajectory-lock.md`. One Accepted anchor (Case 007), which
+itself documents both incidents above. Whether the second (same-week)
+incident already satisfies §10's "second underlying incident" bar for
+`Emerging` on its own is an open question flagged in the pattern file
+for maintainer decision, not yet resolved.
+
+---
+
+## 13. Transformation Boundaries
+
+**One line:** Whenever information has to change shape — free text
+into structured data, one system's schema into another's — meaning can
+quietly fall out at the crossing, even though every side of that
+crossing looks correct on its own.
+
+**Plain language:** Passing a message through a chain of translators,
+each one perfectly fluent in their own two languages, can still lose
+the one detail that mattered — because no single translator's own
+language pair was ever wrong.
+
+**A real event:** A loan-intake system used an LLM to extract
+structured details from a customer's free-text message, normalized
+that into an internal schema, then sent it to a third-party
+rate-lookup platform for pricing. A customer clearly stated a specific
+loan-qualification type (DSCR, used for investment-property loans) —
+but the extraction schema had no field for it, so it silently dropped
+out at that first step. A later layer already had a fallback rule
+written to catch exactly this case, but it was watching for a
+different signal than the one the extractor actually produced — a
+second, independent mismatch stacked on the first. Every component
+returned a valid, well-formed result. Nothing errored. For six days,
+every message through that channel got a confident, fully-priced quote
+for the wrong loan product.
+
+**Why AI does this:** Each stage in a multi-component pipeline only
+checks that its own output is a valid instance of its own contract —
+it has no way to check that it still means what the previous stage
+meant. Two adjacent layers can each be internally correct and still
+drift out of sync with each other, and neither layer's own tests can
+detect that, because the mismatch only exists in the comparison between
+them, not inside either one.
+
+**What to do about it:** Treat cross-layer vocabulary consistency as
+something checked explicitly and periodically, not just when a symptom
+happens to surface — for every pair of adjacent layers, does every
+value one layer can express have somewhere to go in the next layer's
+schema, and vice versa?
+
+**Formal status:** `Pattern — Observed / Active`. In
+`patterns/transformation-boundaries.md`. One Accepted anchor (Case
+005). At least two further independently-observed instances are known
+from private source material but not yet independently
+submitted/Accepted.
 
 ---
 
