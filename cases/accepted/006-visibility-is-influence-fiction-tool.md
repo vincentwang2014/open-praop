@@ -7,9 +7,9 @@
 assistance tool
 **AI system involved:** An LLM used to draft narrative scenes,
 one scene at a time
-**Maps to:** candidate Pattern **Visibility Is Influence** — not yet in
-`../../patterns/` (this is its anchor case; see
-`PLAIN_LANGUAGE_GUIDE.md` Entry 1)
+**Maps to:** `../../patterns/visibility-is-influence.md` (Observed /
+Active) — this is its anchor case; see `PLAIN_LANGUAGE_GUIDE.md`
+Entry 1
 
 ### Plain-Language Version (人话版)
 
@@ -168,11 +168,10 @@ that idea yet, so it isn't recorded as a Pattern Mapping relation.
   Anti-mapping question is credible — distinguishes from "the prompt
   instruction was poorly worded" by noting a purely structural fix
   worked where a direct, unambiguous instruction did not.
-- **Confidence:** Case accepted; the pattern itself does not yet exist
-  in `patterns/` — writing that file is the next step, out of scope for
-  this admission. Per §10, it would start at `Observed` with exactly
-  one Accepted anchor; a second, independent instance is referenced in
-  `PLAIN_LANGUAGE_GUIDE.md` Entry 1 (a mortgage-advisory chat system
-  carrying forward a customer's bankruptcy disclosure and phone numbers
-  simply because they were visible in context) but has not yet been
-  independently submitted and Accepted as its own Case.
+- **Confidence:** Case accepted; the pattern now exists at
+  `../../patterns/visibility-is-influence.md`, `Observed / Active`
+  with this case as its anchor. A second, independent instance is
+  referenced in `PLAIN_LANGUAGE_GUIDE.md` Entry 1 (a mortgage-advisory
+  chat system carrying forward a customer's bankruptcy disclosure and
+  phone numbers simply because they were visible in context) but has
+  not yet been independently submitted and Accepted as its own Case.

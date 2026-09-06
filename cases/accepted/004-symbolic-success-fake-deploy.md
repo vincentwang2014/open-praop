@@ -6,10 +6,10 @@
 **Domain:** Software engineering — a small-business production system
 **AI system involved:** A coding agent making a code change and
 reporting on its own deployment status
-**Maps to:** candidate Pattern **Symbolic Success ≠ Operational
-Correctness** — not yet in `../../patterns/` (this is its fourth
-anchor case; see `PLAIN_LANGUAGE_GUIDE.md` Entry 2 for two further
-independently-observed incidents of the same shape)
+**Maps to:** `../../patterns/symbolic-success.md` (Observed / Active)
+— this is its anchor case; see `PLAIN_LANGUAGE_GUIDE.md` Entry 2 for
+further independently-observed incidents of the same shape, not yet
+independently submitted/Accepted
 
 ### Plain-Language Version (人话版)
 
@@ -158,11 +158,11 @@ production" as two separate claims requiring two separate checks.
   anchors already identified from a separate source (see
   `PLAIN_LANGUAGE_GUIDE.md` Entry 2). Anti-mapping question is credible
   — distinguishes the structural claim from "the agent lied."
-- **Confidence:** Case accepted; the pattern itself does not yet exist
-  in `patterns/` — writing that file is the next step, out of scope for
-  this admission. Once written, this pattern is unusually
-  well-evidenced for a first pattern file (multiple independent
-  incidents across at least two separate source projects), though per
-  §10 confidence still starts governed by how many of those incidents
-  have themselves been formally Accepted as Cases, not by how many are
-  merely described in review notes.
+- **Confidence:** Case accepted; the pattern now exists at
+  `../../patterns/symbolic-success.md`, `Observed / Active` with this
+  case as its anchor — unusually well-evidenced for a first pattern
+  file (multiple independent incidents across at least two separate
+  source projects), though per §10 confidence stays governed by how
+  many of those incidents have themselves been formally Accepted as
+  Cases, not by how many are merely described in review notes; none of
+  the others have been submitted yet.
