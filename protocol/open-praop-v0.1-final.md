@@ -144,7 +144,45 @@ Open PRAOP 主要研究的对象不是模型内部，而是：
 
 # 2. Open PRAOP 的四类核心资产
 
-Open PRAOP v0.1 只维护四类内容。
+Open PRAOP v0.1 只维护四类不断增长的知识资产，大致是一条链：
+
+```text
+Case → Pattern → Practice → Playbook
+```
+
+* **Case** — 一次具体发生的事。
+* **Pattern** — 多个 Case 里反复出现、机制相似的失效（或成功）形状。
+* **Practice** — 为了应对某个 Pattern，具体应该怎么做。
+* **Playbook** — 把多个 Practice 组织成一套可执行流程。
+
+人话：**Case 是一次事情，Pattern 是反复出现的套路，Practice 是具体怎么
+做，Playbook 是一整套做法。**
+
+这条链不是严格单向的产线——例如一个 Practice 也可能反过来促成新的 Case
+被观察到——但从"发生了什么"到"该怎么系统化应对"，大方向是这四步。
+
+**Principle 不是第五个平行资产。** 它是跨在这条链上方的一个小型
+foundational layer，不持续大量增长：
+
+```text
+        Principles
+      ↙     ↓     ↘
+Case → Pattern → Practice → Playbook
+```
+
+Principle 可以从多个 Case、一个或多个 Pattern、甚至某个反复验证失败的
+Practice 里提炼出来——但不是"每发现一个 Pattern 就再产一条 Principle"。
+新增一条 Principle 的门槛明确高于新增一个 Pattern：
+
+> 只有当它跨越多个事件/Pattern，并且会改变 Open PRAOP 通用工作方式本身
+> 时，才值得成为 Principle。
+
+人话：**Pattern 可以多，Principle 要少。**
+
+Principle 的具体清单见 §3。它是小型、慢速增长的一层，不是 Case / Pattern
+/ Practice / Playbook 那种持续累积的目录——这是刻意的，防止的正是 §18
+"Doctrine Inflation" 警惕的那种膨胀，只是发生在 Principle 层而不是
+Pattern 层。
 
 ## 2.1 Cases
 
@@ -207,6 +245,10 @@ v0.1 不追求大量 Playbook，只建立格式。
 ---
 
 # 3. 基本方法
+
+这是 Open PRAOP 的 **Principle 层**（见 §2 对 Principle 与四类资产关系
+的说明）——小型、慢速增长，新增门槛明确高于 Pattern，不是持续累积的
+目录。
 
 Open PRAOP 遵守几个最小原则。
 
