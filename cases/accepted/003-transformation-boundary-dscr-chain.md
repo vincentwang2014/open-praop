@@ -1,4 +1,4 @@
-# Case 005 — Transformation Boundaries: Silent Semantic Drift Across a Multi-Layer Extraction Chain
+# Case 003 — Transformation Boundaries: Silent Semantic Drift Across a Multi-Layer Extraction Chain
 
 **Status:** Accepted
 **Evidence level:** E0 — Self-Reported

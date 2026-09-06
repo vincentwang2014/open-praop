@@ -1,4 +1,4 @@
-# Case 007 — Trajectory Lock: Three Weeks Chasing a "Rate Limit" That Turned Out to Be a Twenty-Line Timeout Bug
+# Case 005 — Trajectory Lock: Three Weeks Chasing a "Rate Limit" That Turned Out to Be a Twenty-Line Timeout Bug
 
 **Status:** Accepted
 **Evidence level:** E0 — Self-Reported

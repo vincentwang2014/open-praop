@@ -98,7 +98,7 @@ for any consequential action, check the actual resulting state, in the
 same session, rather than trusting "I did it."
 
 **Formal status:** `Pattern — Observed / Active`. Now in
-`patterns/symbolic-success.md`. One Accepted anchor (Case 006, ②
+`patterns/symbolic-success.md`. One Accepted anchor (Case 004, ②
 above); three further independently-observed incidents are known
 (including Case ① above) but not yet independently submitted/Accepted
 — see the pattern file for what would move this to `Emerging`.
@@ -463,7 +463,7 @@ building infrastructure around a suspected external constraint, verify
 the constraint actually exists.
 
 **Formal status:** `Pattern — Observed / Active`. Now in
-`patterns/trajectory-lock.md`. One Accepted anchor (Case 007), which
+`patterns/trajectory-lock.md`. One Accepted anchor (Case 005), which
 itself documents both incidents above. Whether the second (same-week)
 incident already satisfies §10's "second underlying incident" bar for
 `Emerging` on its own is an open question flagged in the pattern file
@@ -513,7 +513,7 @@ schema, and vice versa?
 
 **Formal status:** `Pattern — Observed / Active`. In
 `patterns/transformation-boundaries.md`. One Accepted anchor (Case
-005). At least two further independently-observed instances are known
+003). At least two further independently-observed instances are known
 from private source material but not yet independently
 submitted/Accepted.
 
@@ -557,7 +557,7 @@ validity? If yes, stop and fix now. If no, log it and keep going —
 rather than reflexively adding a new check on the spot.
 
 **Formal status:** `Pattern — Observed / Active`. One Accepted anchor.
-Full record: [Case](cases/accepted/004-control-accretion-rerun.md) ·
+Full record: [Case](cases/accepted/002-control-accretion-rerun.md) ·
 [Pattern](patterns/control-accretion.md).
 
 ---
@@ -594,7 +594,7 @@ symptom. Test the fix against the opposite-direction failure, not only
 a repeat of the same one.
 
 **Formal status:** `Pattern — Observed / Active`. One Accepted anchor.
-Full record: [Case](cases/accepted/003-lesson-generalization-failure.md)
+Full record: [Case](cases/accepted/001-lesson-generalization-failure.md)
 · [Pattern](patterns/lesson-generalization-failure.md).
 
 ---
