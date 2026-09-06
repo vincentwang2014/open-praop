@@ -2,6 +2,13 @@
 
 *Probabilistic Reliability AI Operations Practice*
 
+> **New to PRAOP?** Start with **[PRAOP in Plain Language](PLAIN_LANGUAGE_GUIDE.md)**
+> — real cases first, plain language second.
+>
+> **Want the formal method?** Read the Protocol:
+> [English](protocol/open-praop-v0.1-final.en.md) |
+> [中文](protocol/open-praop-v0.1-final.md).
+
 PRAOP is an open, case-driven practice for learning how humans and AI
 systems can work together reliably.
 
@@ -261,7 +268,9 @@ primary kinds of material:
 
 The full protocol (submission templates, de-identification rules,
 evidence levels, promotion rules) lives in
-`protocol/open-praop-v0.1-final.md`.
+[`protocol/open-praop-v0.1-final.en.md`](protocol/open-praop-v0.1-final.en.md)
+([中文](protocol/open-praop-v0.1-final.md) is canonical; the English
+file is a faithful translation — see that file's own header).
 
 Open PRAOP defines the practice. Want to apply it inside a live
 AI-assisted project instead of only reconstructing it after an incident?
