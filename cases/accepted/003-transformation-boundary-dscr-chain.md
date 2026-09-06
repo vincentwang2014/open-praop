@@ -201,6 +201,28 @@ untested.
 
 ---
 
+### Recurrence Note (added 2026-09-06)
+
+The same underlying defect recurred once more on 2026-05-15, before
+the permanent fix described in G above had shipped: a different
+broker scenario, again explicitly stating a DSCR-qualifying loan, was
+again silently routed to a standard Conventional program — the same
+gap described in C above (the normalization layer's fallback checking
+a different pair of fields than the ones actually carrying the DSCR
+signal), not a new one.
+
+This is recorded here as **recurrence evidence**, not a second
+independent incident. Per protocol §10's definition of "independent"
+("a distinct underlying incident, not a different write-up of the
+same one"), this does not count as, and is not being submitted as, a
+second anchor for Transformation Boundaries — same code path, same
+root cause, same fix scope, occurring before that fix shipped. It
+strengthens confidence that the original defect was a persistent,
+recurring gap rather than a one-off fluke; that is its evidentiary
+value here, explicitly separate from anchor counting.
+
+---
+
 ## Pattern Mapping
 
 - Transformation Boundaries (`patterns/transformation-boundaries.md`) — Supports (Primary anchor)
