@@ -69,11 +69,16 @@ second instance — not yet promoted to `../practices/`.
 
 ## Related Cases
 
-- Sub-events from the same-day source cluster that produced Case 003
-  are under review (2026-09-06): one (context-window truncation
-  silently dropping stated facts) is anticipated as **Partial** once
-  formally submitted, not yet a Case; another (a same-mechanism
-  recurrence before the underlying fix shipped) is expected to be
-  recorded as recurrence evidence on Case 003 itself, not a second
-  independent anchor — see Case 003's own Pattern Mapping / Maintainer
-  review notes once that's done.
+- Case 009 — **Partial** (context-window truncation silently dropping
+  stated facts; same "upstream fact silently invisible downstream, no
+  error" shape as this pattern, but via a context-selection boundary
+  rather than a representation/schema-translation boundary — an open
+  classification question deliberately left unresolved rather than
+  settled by expanding this pattern's scope; see Case 009's own
+  Anti-Mapping Question)
+- Cases 007 and 008 — **Challenges** (considered and rejected as a fit;
+  see each case's own Pattern Mapping section)
+- A same-mechanism recurrence of Case 003 (before its underlying fix
+  shipped, same source cluster) is expected to be recorded as
+  recurrence evidence on Case 003 itself, not a second independent
+  anchor — not yet done.
