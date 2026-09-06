@@ -24,7 +24,8 @@ Step 1 of the protocol).
 | 003 | Silent Semantic Drift Across a Multi-Layer Extraction Chain | E0 | Accepted | `patterns/transformation-boundaries.md` |
 | 004 | A Coding Agent Reported a Fix as Deployed; It Had Not Actually Gone Live for 20 Hours | E0 | Accepted | `patterns/symbolic-success.md` |
 | 005 | Three Weeks Chasing a "Rate Limit" That Turned Out to Be a Twenty-Line Timeout Bug | E0 | Accepted | `patterns/trajectory-lock.md` |
+| 006 | A Long-Form Writing Tool Kept Repeating Earlier Scenes Once It Could See the Full Outline | E0 | Accepted | `patterns/visibility-is-influence.md` |
 
-All five are E0 (self-reported, no attached artifact) — accepted
+All six are E0 (self-reported, no attached artifact) — accepted
 anyway, tagged honestly rather than inflated. See each case file's
 provenance note for why.
