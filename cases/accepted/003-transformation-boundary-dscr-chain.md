@@ -16,13 +16,14 @@ in `../../patterns/` (this is its anchor case)
 *Added by maintainer, per protocol §9 (Accepted cases should carry
 one).*
 
-A customer's stated loan qualification quietly disappeared as it
-passed through three internal handoffs — text extraction, schema
-normalization, a third-party pricing lookup — because each layer's own
-tests only checked that its own output was well-formed, never that it
-still matched what the layer before it meant. Every step passed; the
-fact itself vanished at the seams between them, and the system
-returned a confident, fully-priced answer for the wrong product.
+A customer clearly stated an important fact about the kind of loan
+they wanted. The step that first read the message understood it fine
+— but by the time the request reached the final pricing step, that
+fact had quietly vanished, and nobody's own checks ever caught it,
+because each step only checked that its own answer looked complete,
+not that it still matched what the customer actually said. The system
+confidently returned a full, professional-looking quote — just for the
+wrong kind of loan.
 
 > De-identified per `../../protocol/open-praop-v0.1-final.md` §7 —
 > the business name, the third-party rate-lookup vendor, the messaging

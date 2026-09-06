@@ -19,15 +19,13 @@ not an anchor — see Pattern Mapping below.
 *Added by maintainer, per protocol §9 (Accepted cases should carry
 one).*
 
-An extraction step produced a loan-program value that wasn't one of
-the fixed options its own instructions allowed — not a missing value,
-an invented one. A fallback rule existed specifically to fix wrong
-loan-program values, but it only ever checked for a *missing* value,
-so it never triggered. The invalid value sailed through untouched, and
-the system returned a complete, polished quote for the wrong loan
-program. The lesson isn't "another pipeline bug" — it's that a
-safeguard built to catch silence provides zero protection against a
-confident, present, wrong answer.
+The system was only ever supposed to pick from a short, fixed list of
+loan-program answers. Instead, it invented a new answer that wasn't on
+the list at all. A safety check existed for exactly this kind of
+mistake — but it was built to catch a different problem: what to do
+when no answer comes back at all. Because the system confidently
+returned a wrong answer instead of no answer, the safety check never
+even noticed there was a problem.
 
 > De-identified per `../../protocol/open-praop-v0.1-final.md` §7 — the
 > business name, the third-party rate-lookup vendor, internal
