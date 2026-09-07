@@ -28,7 +28,8 @@ Step 1 of the protocol).
 | 007 | A Confidently Wrong Loan-Program Value Bypassed the Safeguard Built to Catch a Missing One | E0 | Accepted | none — Challenges `patterns/transformation-boundaries.md`, considered and rejected as a fit |
 | 008 | A Hardcoded Schema Default Silently Outranked What the Broker Actually Said | E0 | Accepted | none — Challenges `patterns/transformation-boundaries.md`, considered and rejected as a fit |
 | 009 | A Truncated Conversation Window Made the System Re-Ask Something a Customer Had Already Answered; the Customer Soon Opted Out | E0 | Accepted | none (anchor) — Partial fit on `patterns/transformation-boundaries.md`, an open classification question, not settled either way |
+| 010 | The Owner Kept Nodding Along to AI-Generated Doctrine Terms He No Longer Independently Understood | E0 | Accepted | `patterns/semantic-ownership-loss.md` |
 
-All nine are E0 (self-reported, no attached artifact) — accepted
+All ten are E0 (self-reported, no attached artifact) — accepted
 anyway, tagged honestly rather than inflated. See each case file's
 provenance note for why.

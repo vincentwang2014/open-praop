@@ -29,11 +29,12 @@ Test yet, no matter how precise the formal definition is.
 | Symbolic Success ≠ Operational Correctness | Observed / Active | Case 004 | this is a *fourth* independently-observed incident of the same shape (3 more known, see `../PLAIN_LANGUAGE_GUIDE.md` Entry 2) — unusually well-evidenced for `Observed`, but none of the other 3 have been formally submitted/Accepted yet |
 | Trajectory Lock | Observed / Active | Case 005 | anchor case itself describes 2 incidents (primary + a same-week independent one); whether the second counts toward `Emerging` on its own is an open question flagged for maintainer decision — see the pattern file |
 | Visibility Is Influence | Observed / Active | Case 006 | a second, independent-environment incident is known (see `../PLAIN_LANGUAGE_GUIDE.md` Entry 1) but not yet independently submitted/Accepted |
+| Semantic Ownership Loss | Observed / Active | Case 010 | anchor case describes 3 recorded moments treated conservatively as one episode, not three anchors; a distinct successful-defense episode is kept as future Practice evidence, not a second anchor |
 
-All six patterns are capped at `Observed` because each has exactly one
-*Accepted* anchor case. Per §10, `Emerging` requires that anchor *plus*
-additional independent evidence or a second underlying incident — a
-well-written, compelling single case does not clear that bar on its
+All seven patterns are capped at `Observed` because each has exactly
+one *Accepted* anchor case. Per §10, `Emerging` requires that anchor
+*plus* additional independent evidence or a second underlying incident —
+a well-written, compelling single case does not clear that bar on its
 own, and unsubmitted source material (however credible) does not count
 until it has itself gone through Maintainer Review and Case Admission.
 
