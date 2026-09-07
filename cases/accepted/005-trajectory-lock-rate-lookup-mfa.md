@@ -19,13 +19,14 @@ one).*
 
 A login automation kept failing, and each time an AI coding agent
 proposed a fix, confirmed it worked, then watched it fail again —
-until it settled on "the vendor is rate-limiting us" and spent three
-weeks building progressively more elaborate workarounds (paid proxies,
-a dedicated home-network device) that were never actually needed. It
-broke only when a human asked the most basic possible question — would
-a paying customer really get rate-limited that hard? — and the real
-cause turned out to be a twenty-line timeout bug: the automation wasn't
-waiting for the login code the way a human naturally would.
+until it decided the outside company must be blocking it on purpose,
+and spent three weeks building progressively more elaborate
+workarounds (paid proxies, a dedicated home-network device) that were
+never actually needed. It broke only when a human asked the most
+basic possible question — would a paying customer really get blocked
+like that? — and the real cause turned out to be tiny: the automation
+wasn't waiting long enough for the login code to arrive, the way a
+person naturally would.
 
 > De-identified per `../../protocol/open-praop-v0.1-final.md` §7 — the
 > operator's name is removed throughout (→ "the operator"); the
