@@ -38,7 +38,14 @@ than once, over several weeks — not because any system flagged it.
 > early-stage AI-operations methodology project), never named.
 > "PRAO"/"PRAO-1000" are kept as the actual subject matter of the
 > incident — the methodology's own predecessor naming — not an
-> identifying detail.
+> identifying detail. **Unlike this corpus's other cases, this one is
+> not claimed as a full combination-risk pass:** describing this as
+> predating Open PRAOP's own public protocol directly ties "the
+> operator" to this project's own named, public maintainer, without
+> requiring a reader to combine several weaker signals. That
+> identifiability is accepted as public residual context rather than
+> protected — nothing about it was actually secret — see Maintainer
+> review notes for the reviewer's explicit call.
 
 ---
 
@@ -126,14 +133,21 @@ doctrine-building) continued on top of that material before the
 operator re-asserted independent understanding — the gap was not
 caught by either AI system or by any automated check, only by the
 operator's own repeated, explicit admissions that he was not following
-it. The AI-produced material was not shown to be factually wrong at
-any point; the risk was structural, not a correctness failure.
+it. The incident does not depend on the AI-produced material being
+factually wrong; the recorded failure was structural rather than
+primarily a correctness failure — the framework's own claimed
+principle count (see C above) was itself inaccurate by an order of
+magnitude, but the loss of independent understanding would have
+occurred whether or not that specific count was correct.
 
 ### E. What Was Surprising?
 
-The AI systems were not in conflict, and nothing they produced is
-described as false — the two systems' mutual fluency with each other
-is exactly what made the gap easy to miss. A second surprising detail:
+The AI systems were not in conflict with each other, and the gap does
+not depend on anything they produced being false — one specific claim
+(the principle count) was in fact inaccurate, but the mechanism itself
+is about the two systems' mutual fluency, not about deception or error:
+that fluency is exactly what made the gap easy to miss regardless of
+whether any individual claim inside it happened to be correct. A second surprising detail:
 even the AI systems themselves rendered the framework's own name
 inconsistently across their own outputs, meaning the artifact hadn't
 even stabilized on its own identity while the operator was already
@@ -248,11 +262,20 @@ from the AI.
   private project is described only by its role, never named.
   "PRAO"/"PRAO-1000" kept as the incident's actual subject matter (the
   methodology's own predecessor naming), not an identifying detail —
-  analogous to keeping "DSCR" in Case 003. Combination-risk checked:
-  the remaining detail (two AI systems, a private methodology project,
-  a doctrine-naming episode) does not point to a specific company,
-  client, or person beyond what every other case in this corpus already
-  makes clear about its own operator.
+  analogous to keeping "DSCR" in Case 003. **This case's identifiability
+  is not the same as the corpus's other cases, and is recorded honestly
+  rather than claimed as a full combination-risk pass:** by explicitly
+  describing this as "predating this project's own public protocol,"
+  this case directly ties "the operator" to the named, public creator
+  and maintainer of Open PRAOP itself — a reader does not need to
+  combine multiple weak signals to reach that inference, unlike the
+  business-context cases (001, 004, 005, etc.), where "the operator"
+  could in principle be a stand-in for a different accountable person.
+  **Operator identity here is accepted as public residual context, not
+  protected** — the reviewer's own explicit call, on the grounds that
+  nothing about this specific fact was ever actually secret (he is
+  already this project's named, public maintainer); no history
+  remediation was judged necessary as a result.
 - **Fact vs. interpretation:** kept separate above (C vs. I). An
   earlier draft of this case asserted the AI-produced material "was not
   factually wrong" — corrected during review to the narrower, more
