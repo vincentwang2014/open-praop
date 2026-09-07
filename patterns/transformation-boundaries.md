@@ -78,7 +78,7 @@ second instance — not yet promoted to `../practices/`.
   Anti-Mapping Question)
 - Cases 007 and 008 — **Challenges** (considered and rejected as a fit;
   see each case's own Pattern Mapping section)
-- A same-mechanism recurrence of Case 003 (before its underlying fix
-  shipped, same source cluster) is expected to be recorded as
-  recurrence evidence on Case 003 itself, not a second independent
-  anchor — not yet done.
+- A same-mechanism recurrence of Case 003, before its underlying fix
+  shipped (same source cluster), is recorded as recurrence evidence in
+  Case 003's own "Recurrence Note" — explicitly not a second
+  independent anchor, per §10's definition of "independent."
