@@ -8,6 +8,10 @@
 > **Want the formal method?** Read the Protocol:
 > [English](protocol/open-praop-v0.1-final.en.md) |
 > [中文](protocol/open-praop-v0.1-final.md).
+>
+> **Curious why this exists at all?** Read
+> [Origin and Vision](ORIGIN_AND_VISION.md)
+> ([中文](ORIGIN_AND_VISION.zh.md)).
 
 PRAOP is an open, case-driven practice for learning how humans and AI
 systems can work together reliably.
