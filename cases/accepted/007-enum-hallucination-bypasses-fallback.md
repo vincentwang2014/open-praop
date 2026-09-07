@@ -174,6 +174,7 @@ the prompt specified the allowed set.
 ## Pattern Mapping
 
 - Transformation Boundaries (`../../patterns/transformation-boundaries.md`) — **Challenges** (considered and rejected as a fit — Case 003's mechanism is information silently failing to cross a boundary at all; this case's mechanism is a confidently-wrong present value defeating a fallback built only for absence. Same source system, same-day cluster, different underlying failure shape.)
+- Lesson-Generalization Failure (`../../patterns/lesson-generalization-failure.md`) — **Partial** (added 2026-09-07 via a corpus-wide Case↔Pattern mapping audit)
 
 This is the mapping discipline's first recorded use of **Challenges**:
 not "the Pattern is wrong," but "this case was seriously considered for
@@ -181,6 +182,20 @@ the Pattern and, after Anti-Mapping, judged not to fit — and here is
 why." Recording a considered non-fit has falsification value and
 guards against Pattern scope creep, the same way an anchor guards
 against unfounded promotion.
+
+**On the Lesson-Generalization Failure relation:** this case shares its
+anchor's exact mechanism — a fix (here, fallback logic checking for a
+missing value) written in response to an earlier, same-day correction
+was scoped to the literal shape of that correction, and did not fire
+when the same underlying risk (the loan-program field ending up wrong)
+resurfaced in a structurally different shape (a confidently wrong,
+non-empty value). Kept at **Partial**, not Supports: Lesson-
+Generalization Failure's anchor (Case 001) is specifically about an
+agent's own behavioral correction not generalizing; this case's "fix"
+is a code-level fallback safeguard, not an agent's learned behavior.
+Whether these are the same underlying mechanism regardless of whether
+the fix is behavioral or coded is an open scope question for a future
+case to settle, not decided here.
 
 ---
 

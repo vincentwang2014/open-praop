@@ -185,8 +185,8 @@ only when a customer complains or leaves.
 - Transformation Boundaries (`../../patterns/transformation-boundaries.md`) — **Partial** (shares the "upstream fact silently invisible downstream, no error" shape, but via a context-selection/truncation boundary rather than a representation/schema-translation boundary — see Anti-Mapping Question above for the open classification question this deliberately leaves unresolved)
 
 This is the mapping discipline's first recorded use of **Partial**,
-distinct from both the two existing **Supports** anchors and the two
-existing **Challenges** relations (Cases 007 and 008). A clean sample
+distinct from the existing **Supports** anchor and the two existing
+**Challenges** relations (Cases 007 and 008). A clean sample
 of what Partial is for: a real, non-trivial shared shape with a
 Pattern's mechanism, held apart from full endorsement pending an
 explicit classification question this case deliberately leaves open

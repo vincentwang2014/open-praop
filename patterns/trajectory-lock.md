@@ -57,8 +57,8 @@ repo (both prior patterns are capped at `Observed` with exactly one
 anchor case, "regardless of how detailed or compelling this single
 case is" — see `README.md`), and because promotion decisions are
 explicitly a human call, not something a pattern write-up should
-pre-decide. **Flagged for Vincent's explicit decision**, not assumed
-here.
+pre-decide. **Flagged for the maintainer's explicit decision**, not
+assumed here.
 
 ## What would move this to Emerging
 

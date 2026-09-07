@@ -63,4 +63,11 @@ same-direction one.
 
 ## Related Cases
 
-None known yet.
+- Case 007 — **Partial** (a code-level fallback safeguard, already
+  fixed once for a missing-value shape of a risk, didn't fire against
+  a confidently-wrong-but-present shape of the same underlying risk —
+  same "fix scoped to the literal symptom" mechanism as this pattern's
+  anchor, but at the level of engineered logic rather than an agent's
+  own behavioral correction; see Case 007's own Pattern Mapping
+  section. Added 2026-09-07 via a corpus-wide Case↔Pattern mapping
+  audit.)
