@@ -112,12 +112,11 @@ something specific to multi-AI doctrine-building.
 
 ### Related practice
 
-None yet, formally. The anchor case's own §K (require a plain-language
-layer the accountable human can restate, challenge, and reconstruct —
-not merely approve; reject a fluent AI-proposed term until the human
-can state the idea in language that didn't come from the AI) is a
-first candidate, to be drafted and reviewed separately as its own
-Practice — not assumed by this Pattern's acceptance.
+`../practices/plain-language-re-ownership.md` — Observed / Active,
+Guidance. Drafted from this Pattern's own anchor case (§K), reviewed
+separately, and accepted on its own terms per protocol §14 (including
+an explicit Cost/Friction note) — not assumed automatically by this
+Pattern's own acceptance.
 
 ### Case Anchors
 
