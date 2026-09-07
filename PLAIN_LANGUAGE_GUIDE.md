@@ -416,10 +416,16 @@ or agents, keep its source, its owner, and one authoritative artifact
 explicitly attached — don't let a retelling quietly become the new
 original.
 
-**Formal status:** Pattern candidate, recently upgraded from Hold — has
-its own real incident, independent of every other accepted case in the
-corpus. Not yet submission-formatted or drafted into formal text.
-Accepted anchor(s): none yet.
+**Formal status:** Case 010 — Accepted / E0. The Pattern is now
+Observed / Active in
+`patterns/semantic-ownership-loss.md`, and its related Practice,
+Plain-Language Re-Ownership, is now Observed / Active — Guidance in
+`practices/plain-language-re-ownership.md`. Case 010 remains the sole
+Accepted anchor: its three recorded moments count as one continuous
+episode, and the successful-defense episode is Practice evidence, not a
+second loss incident. Neither the Pattern nor the Practice qualifies for
+Emerging without additional independent evidence or a second
+underlying incident.
 
 ---
 
