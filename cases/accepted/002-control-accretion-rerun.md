@@ -14,13 +14,14 @@ system provided architect-role commentary afterward.
 *Added by maintainer, per protocol §9 (Accepted cases should carry
 one).*
 
-A same-day rerun of an already-decided experiment turned into most of
-a working day. Every safety check added along the way was individually
-justified — each one caught a real bug — but the checks kept changing
-the exact thing they were supposed to be verifying, so each fix
-triggered another round of re-verification. No single step was wrong;
-the loop came from checking the work and doing the work no longer
-staying separate.
+A team just needed to rerun an experiment they'd already finished
+deciding — a same-day repeat, nothing new to figure out. But every
+safety check they added along the way, to make sure nothing had gone
+wrong, ended up changing something itself — which meant the work had
+to be checked all over again. Each individual check made complete
+sense on its own. Put together, they turned a quick repeat into most
+of a working day, because checking the work and doing the work had
+stopped being two separate things.
 
 > Exported from a private pilot run that validated the Open PRAOP
 > submission pipeline before this repo existed. De-identified per
