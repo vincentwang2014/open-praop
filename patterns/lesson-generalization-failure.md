@@ -71,3 +71,8 @@ same-direction one.
   own behavioral correction; see Case 007's own Pattern Mapping
   section. Added 2026-09-07 via a corpus-wide Case↔Pattern mapping
   audit.)
+- Case 011 — **Partial** (this pattern's mechanism is that a recorded
+  lesson's *content* was too narrow and over-corrected in the wrong
+  direction; Case 011's mechanism is different — the recorded content
+  was accurate and sufficient, and the failure was retrieval timing,
+  not content scope — see Case 011's own Anti-Mapping Question)

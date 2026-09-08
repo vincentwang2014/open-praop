@@ -29,7 +29,13 @@ Step 1 of the protocol).
 | 008 | A Hardcoded Schema Default Silently Outranked What the Broker Actually Said | E0 | Accepted | none — Challenges `patterns/transformation-boundaries.md`, considered and rejected as a fit |
 | 009 | A Truncated Conversation Window Made the System Re-Ask Something a Customer Had Already Answered; the Customer Soon Opted Out | E0 | Accepted | none (anchor) — Partial fit on `patterns/transformation-boundaries.md`, an open classification question, not settled either way |
 | 010 | The Owner Kept Nodding Along to AI-Generated Doctrine Terms He No Longer Independently Understood | E0 | Accepted | `patterns/semantic-ownership-loss.md` |
+| 011 | Recorded Knowledge Was Not Retrieved Before Acting | Mixed | Accepted | none (anchor) — candidate primary anchor for a not-yet-named Pattern; Partial fit on `patterns/lesson-generalization-failure.md` and `patterns/transformation-boundaries.md` |
 
-All ten are E0 (self-reported, no attached artifact) — accepted
-anyway, tagged honestly rather than inflated. See each case file's
-provenance note for why.
+Cases 001–010 are E0 (self-reported, no attached artifact) — accepted
+anyway, tagged honestly rather than inflated. Case 011 is Mixed: some
+claims are publicly, independently verifiable; others rest on the
+maintainer's own local verification and are not independently
+retrievable by a public reader — see that case's own Section H for the
+per-claim breakdown, reached only after several review rounds
+corrected inconsistent evidence claims. See each case file's provenance
+note for why.
