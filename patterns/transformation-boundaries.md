@@ -78,6 +78,12 @@ second instance — not yet promoted to `../practices/`.
   Anti-Mapping Question)
 - Cases 007 and 008 — **Challenges** (considered and rejected as a fit;
   see each case's own Pattern Mapping section)
+- Case 011 — **Partial** (recorded knowledge remained available but
+  wasn't retrieved before acting; distinct mechanism from this
+  pattern's representation/transformation boundary — this pattern's
+  failure is that a value has nowhere to go across a schema change,
+  Case 011's is that an available value simply wasn't checked before
+  acting — see Case 011's own Anti-Mapping Question)
 - A same-mechanism recurrence of Case 003, before its underlying fix
   shipped (same source cluster), is recorded as recurrence evidence in
   Case 003's own "Recurrence Note" — explicitly not a second
