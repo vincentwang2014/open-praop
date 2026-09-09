@@ -124,4 +124,13 @@ Pattern's own acceptance.
 
 ### Related Cases
 
-None yet.
+- Case 013 — **Partial** (an independent investigator's own
+  investigation-phase reliance on AI-assisted analysis, distinct
+  domain from this Pattern's existing anchor; a real but
+  incompletely-scoped instance — the accountable investigators
+  retained raw evidence and performed some direct human checking, so
+  the mechanism affects part of the material, not the whole report's
+  understanding and challenge ability — see Case 013's own Pattern
+  Mapping for the full reasoning). Whether this satisfies this
+  Pattern's own stated bar for `Emerging` is explicitly left to the
+  maintainer, not decided by this note.
