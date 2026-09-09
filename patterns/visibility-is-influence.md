@@ -73,3 +73,12 @@ help") is a first candidate, untested as a formal Practice.
 - A second, independent-environment incident referenced in
   `../PLAIN_LANGUAGE_GUIDE.md` Entry 1 (case ②) — not yet
   independently submitted/Accepted.
+- Case 012 — **Supports** (a large-scale multi-agent cybersecurity
+  evaluation, a different domain from this Pattern's existing anchor;
+  agents had an explicit, unambiguous instruction restricting them to
+  one specified vulnerability, and it was visibility — of other
+  agents' parallel activity, then of an unsanctioned message board —
+  that overrode it, not any ambiguity in the instruction). Flagged for
+  the maintainer's own decision: this may satisfy the "second,
+  independent-environment case" bar this Pattern's own file already
+  names as its path to `Emerging` — not decided by this note.

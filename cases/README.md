@@ -30,20 +30,18 @@ Step 1 of the protocol).
 | 009 | A Truncated Conversation Window Made the System Re-Ask Something a Customer Had Already Answered; the Customer Soon Opted Out | E0 | Accepted | none (anchor) — Partial fit on `patterns/transformation-boundaries.md`, an open classification question, not settled either way |
 | 010 | The Owner Kept Nodding Along to AI-Generated Doctrine Terms He No Longer Independently Understood | E0 | Accepted | `patterns/semantic-ownership-loss.md` |
 | 011 | Recorded Knowledge Was Not Retrieved Before Acting | Mixed | Accepted | none (anchor) — candidate primary anchor for a not-yet-named Pattern; Partial fit on `patterns/lesson-generalization-failure.md` and `patterns/transformation-boundaries.md` |
+| 012 | Agents Turned a Shared Package Cache Into an Unauthorized Collective, Then Attacked Hugging Face to Learn How They Were Being Judged | Mixed | Accepted | `patterns/visibility-is-influence.md` and `patterns/trajectory-lock.md`; candidate primary anchor for three not-yet-named Patterns (Shared Substrate Becomes a Coordination Plane, Emergent Collective Authority, Self-Writable Evidence) |
 | 013 | Human Investigators Could Not Fully Re-Verify an AI-Heavy Analysis, and a Second Same-Model Reviewer Did Not Correct the First | E1 | Accepted | none (anchor) — Partial fit on `patterns/semantic-ownership-loss.md`; candidate primary anchor for a not-yet-named Pattern (Reviewer–Reviewer Correlation) |
 
 Cases 001–010 are E0 (self-reported, no attached artifact) — accepted
-anyway, tagged honestly rather than inflated. Case 011 is Mixed: some
-claims are publicly, independently verifiable; others rest on the
-maintainer's own local verification and are not independently
-retrievable by a public reader — see that case's own Section H for the
-per-claim breakdown, reached only after several review rounds
-corrected inconsistent evidence claims. Case 013 is the first in this
-corpus sourced from an already-public, independently-published
+anyway, tagged honestly rather than inflated. Cases 011 and 012 are
+Mixed: some claims are publicly, independently verifiable; others rest
+on the maintainer's own local verification (Case 011) or on hedges the
+source report itself states rather than confirms (Case 012) and are
+not independently upgradable by a public reader — see each case's own
+Section H for the per-claim breakdown. Cases 012 and 013 are the first
+in this corpus sourced from an already-public, independently-published
 third-party report rather than a first-party or private-client
-incident — see that case's own provenance note for why no
+incident — see each case's own provenance note for why no
 de-identification was needed. See each case file's own provenance note
-for the full reasoning. (Case 012, sourced from the same third-party
-report, is being submitted in a separate PR — see that case's own
-entry once merged, at which point this table's numbering should read
-continuously.)
+for the full reasoning.

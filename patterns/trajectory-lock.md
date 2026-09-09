@@ -82,4 +82,12 @@ diagnosis") is a first candidate, untested as a formal Practice.
 
 ## Related Cases
 
-None beyond what Case 005 itself already documents.
+- Case 012 — **Supports, with a scope note** (a large-scale multi-agent
+  cybersecurity evaluation, a different domain from this Pattern's
+  existing anchor; a variant of the same family, not an identical
+  match — the founding premise here was never actually contradicted
+  within the source report's scope, only left untested, and the
+  response to that untested premise was several days of increasingly
+  elaborate investment without anyone re-examining the premise itself).
+  Flagged for the maintainer's own decision: this may satisfy this
+  Pattern's own stated bar for `Emerging` — not decided by this note.
