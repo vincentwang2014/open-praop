@@ -1,0 +1,54 @@
+# Hand-authored example matcher pack.
+#
+# This is NOT a generated release artifact. No corpus-to-pack
+# generation tooling exists yet (see README.md in this directory) —
+# every field below was copied by hand from the two referenced Pattern
+# files as they exist in this repository, per SCHEMA.md's rules.
+# Treat this file as a worked example of the schema, not as a current,
+# complete, or auto-refreshed snapshot of the corpus.
+schema_version: "1"
+corpus_revision: "fcbe320"
+generated_at: "2026-09-17T00:00:00Z"
+source_commit: "fcbe320"
+content_digest: null
+mechanisms:
+  - mechanism_id: pattern.visibility-is-influence
+    name: Visibility Is Influence
+    aliases:
+      - context exposure drives output
+    mechanism:
+      trigger: information is left visible in the model's context after it is no longer needed for the task
+      failure_shape: the model's output gets pulled toward what is visible, overriding an explicit instruction to the contrary
+    observed_directions:
+      - an explicit, unambiguous instruction not to reuse visible content had no measurable effect, while removing that content from view fixed the failure
+    possible_directions: []
+    watch_for:
+      - an outline, prior turn, or other prior state stays visible to the model well past the point it was needed
+      - a fix is being attempted by adding or rewording an instruction, when the underlying content is still in view
+    anti_mapping:
+      - a poorly-worded instruction that a clearer rewrite would have fixed — that is ordinary prompt engineering, not this mechanism
+    accepted_case_anchors:
+      - case_id: "006"
+    confidence: Observed
+    status: Active
+  - mechanism_id: pattern.trajectory-lock
+    name: Trajectory Lock
+    aliases:
+      - locked-in diagnosis
+      - patching around the wrong theory
+    mechanism:
+      trigger: a plausible-sounding explanation is adopted early in a debugging or investigation process
+      substitution: each new piece of contradicting evidence is absorbed as a reason to elaborate the existing theory, in place of re-examining whether the theory itself still holds
+      failure_shape: increasingly elaborate, individually-competent patches accumulate while moving away from the actual root cause
+    observed_directions:
+      - weeks of competently-executed effort spent extending an unexamined theory, ending once an outside party asked the most basic question about the founding assumption
+    possible_directions: []
+    watch_for:
+      - a fix that works and then fails again shortly after
+      - rising patch complexity with no point at which the original diagnosis itself was questioned
+    anti_mapping:
+      - a genuinely hard bug where the time was spent on directly relevant diagnostic attempts, not on elaborating an unexamined theory
+    accepted_case_anchors:
+      - case_id: "005"
+    confidence: Observed
+    status: Active

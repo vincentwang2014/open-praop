@@ -105,6 +105,30 @@ already used in the private origin project's own case notes, and extends
 it to Patterns/Practices/Playbooks, which previously had no equivalent
 requirement.
 
+**Local-First Case Discovery and Public Contribution Boundary added
+(2026-09-17, first post-launch protocol change).** New §21 defines a
+public matcher-pack schema (generated from or validated against the
+Accepted corpus, not a separately hand-maintained doctrine source),
+four local, pre-submission, contributor-side match outcomes (MATCH /
+PARTIAL / NO_FIT / UNMATCHED — explicitly distinct from and
+subordinate to §13 Step 5's existing five maintainer-side mapping
+outcomes), the rule that a local non-match creates no obligation and
+changes no Pattern's status (extends, does not restate, §10
+Anchor-or-Demote and §13's existing Case-Acceptance/Pattern-Promotion
+separation), incident-clustering and anchor-independence recording
+fields extending §10's existing independence clause, the canonical
+**Private Case Locality Boundary** (no default cross-project scanning,
+telemetry, hidden registries, silent PR/upload, or DHT/P2P; any
+implementation claiming Open PRAOP compliance must point to this
+section rather than restate it independently), the requirement that
+external contribution always be a scoped, previewed, explicitly
+authorized action, and DHT/distributed storage as an explicit v1
+non-goal. This supersedes the 2026-09-06 internal decision to build no
+PRAOP tooling layer yet — a concrete local-first design now exists and
+this section is its normative record. Operational implementation (a
+skill or other tool consuming this schema) is out of scope for this
+change and is tracked separately.
+
 ---
 
 ## 1. Open PRAOP 是什么
@@ -1569,3 +1593,158 @@ governance，就是为了不在治理层面复现同一个 failure shape。
 对 Open PRAOP 自身（v0.1-final 新增）：
 
 > **Repair the state model, harden the anchor rule, clean the public boundary, and add one second pair of eyes for doctrine-changing decisions. Then stop.**
+
+---
+
+# 21. Local-First Case Discovery and Public Contribution Boundary
+
+## 21.1 目的
+
+公开的 PRAOP 知识（Pattern、Practice、alias、anti-mapping、Accepted
+Case anchor）应该被带到用户私有的 incident 跟前做比对，而不是把私有
+incident 送到某个地方去做比对。本节是这条原则在 protocol 层面的规范
+定义；具体某个实现（例如 `praop-project` skill）如何落地，由该实现
+自己的文档负责，但不得与本节冲突或另立一套会漂移的规则。
+
+## 21.2 Public Matcher Pack
+
+Public matcher pack 是从已 Accepted 的公开 corpus 生成、或者可以对照
+公开 corpus 验证的一份产物，用来让任何实现在本地离线比对私有
+incident。Open PRAOP 拥有这份 schema 的规范定义权；matcher pack 不得
+成为一套单独手工维护、可能与 corpus 本身产生分歧的"第二套 doctrine"。
+
+最小字段集合（完整定义见仓库 `matcher-pack/SCHEMA.md`）：
+
+* `schema_version` — schema 版本号；
+* `mechanism_id`、`name`、`aliases` — 机制标识与别名；
+* `mechanism.trigger` / `mechanism.substitution` / `mechanism.failure_shape`
+  — 触发条件、被替代的东西、失败的具体形状；
+* `observed_directions`、`possible_directions` — 已观察到的方向 vs.
+  尚未证实、仍是假设的方向；
+* `watch_for`、`anti_mapping` — 需要留意的信号，以及不应被误套用这个
+  机制的情形；
+* `accepted_case_anchors` — 指向已 Accepted 的 case（`case_id`，如涉及
+  incident cluster 则附 `incident_cluster_id`，见 §21.5）；
+* `confidence`、`status` — 与该 Pattern 自身文件里的 Confidence /
+  Status 保持一致，不重新评定。
+
+Provenance 字段：corpus revision 或 release 标识、生成时间、来源
+commit、内容摘要（content digest）。任何实现在记录一次比对结果时，
+必须一并记录它所使用的 pack 版本，且不得暗示一份过期或不完整的 pack
+能穷尽当前公开 corpus 的全部内容。
+
+Pack 的获取方式限定为：随实现一起打包分发；用户主动从 Open PRAOP 拉取
+更新；或组织自行 pin 的一份。获取公开 pack 的过程本身不得携带任何由
+私有 incident 派生的查询参数。
+
+## 21.3 Local Match Outcomes（预提交、contributor 一侧）
+
+在正式提交之前，任何实现都可以在本地把一个 incident 与 public matcher
+pack 比对，并记录以下四种结果之一：
+
+* **MATCH** — 观察到的机制在某个既有公开机制的定义范围内成立；
+* **PARTIAL** — 部分要素成立，但某个实质要素或 scope 条件不成立；
+* **NO_FIT** — 经过认真比较后认为不应该被硬套进某个既有机制；
+* **UNMATCHED** — 现有 public pack 没能给出一个够格的候选——这不是
+  "这是新机制"的证明，只是"现有 pack 没找到"的事实陈述。
+
+这四种结果与 §13 Step 5 中 maintainer 一侧已有的五种 mapping 结果
+（Fits existing pattern / Partial fit / No fit / New pattern
+candidate / Out of scope）**不是同一件事，不能互相替代**：本节的四
+种结果是 contributor 在提交之前、未经审阅的本地观察，提交时可以作为
+背景信息附上；但 §13 Step 5 的 mapping 仍然是唯一有效力的、由
+maintainer 做出的判定，不受 contributor 本地结果的约束。
+
+## 21.4 本地 Non-Match 不产生任何义务，也不改变任何 Status
+
+本地 `UNMATCHED` 不意味着、也不能被解读为"这是一个新 Pattern"，更不能
+据此改变任何既有 Pattern 的 Confidence 或 Status。这是 §10
+Anchor-or-Demote 与 §13"Case Acceptance 和 Pattern Promotion 必须
+分开"两条既有规则的自然延伸，本节不重述那两条规则本身，只补充一点：
+一个尚未提交、只存在于本地的 non-match，其分量比一个已经 Submitted
+的 Case 还要更轻——它甚至还没有经过 §13 Step 1 的"是否足够真实"这一关。
+
+## 21.5 Incident Clustering 与 Anchor Independence
+
+当同一个集中的事件（episode）产生了多份 artifact 或多次表现
+（manifestation）时，提交与记录时必须把"表现次数"和"独立 anchor 数"
+分开记录，例如：
+
+```yaml
+incident_cluster_id: acf-contract-review-2026-09-16
+artifact_count: 3
+manifestation_count: 5
+independent_anchor_count: 1
+```
+
+Independence 要求的是实质上分开的底层 incident，而不是文件不同、
+commit 不同、同一次协同运行里的不同 agent、或者对同一事件的不同
+描述——这与 §10 已有的"'Independent' 指不同的底层 incident，不是同一
+事故的不同写法"完全一致，本节只是把它扩展到"一次事件产生多份
+artifact"这种更常见的情形，并给出具体记录字段。最终的 independence
+判定始终由人类 maintainer 做出。
+
+以下几种状态迁移被明确禁止，不能自动发生：
+
+* 本地 `UNMATCHED` → 自动生成 new Pattern；
+* PR 被打开 → 自动视为 Accepted Case；
+* Case 被 Accept → 自动创建或晋升 Pattern；
+* 同一个 incident 的第二份写法 → 算作第二个 anchor；
+* 一次协同事件中的多份 artifact，仅因为文件不同 → 算作多个独立
+  anchor。
+
+相应地，§13 Step 6.5 的 `## Maintainer Review` 模板增加一项：
+
+```markdown
+- [ ] Manifestation count and independent-anchor count are recorded
+      separately, if the submission spans a clustered episode
+```
+
+## 21.6 Private Case Locality Boundary（规范文本）
+
+> **Private Case Locality Boundary**
+> 私有的、项目本地的 Case 材料，必须停留在用户明确授权的项目范围内。
+> 任何声称遵循 Open PRAOP 的实现，都不得扫描其他项目、创建跨项目
+> registry、发布 fingerprint、同步 metadata、查询 P2P 网络，或者把
+> 任何由 Case 派生的信息传输到远端目的地——除非用户针对那一次具体
+> 行动，明确授权了具体的来源范围、目的地和 payload。
+
+"由 Case 派生的信息"不仅包括原始文本，也包括：hash 与 fingerprint、
+embedding、关键词与被规范化过的机制陈述、项目或仓库名、绝对与相对
+路径、commit 标识、时间戳与 incident 标识、匹配结果与候选标签、
+从 incident 派生出的查询词。**Hash 不等于脱敏，加密本身也不等于
+获得了传输授权。**
+
+任何实现默认都不得：扫描当前授权范围之外的目录；发现或读取无关的
+仓库；创建隐藏的本地或远端 registry；连接 GitHub、GitLab、云存储
+或 DHT 去发布 Case 数据；运行后台同步；上传关于本地匹配或
+non-match 的 telemetry；自动打开 PR；把某一次提交已获得的授权，
+当作对之后提交的常设授权。
+
+这条规则应当处在 kernel 或同等最高优先级的指令层——具体如何在某个
+实现（例如 `praop-project` skill）里落地，是那个实现自己的责任，
+但它必须直接指向本节作为权威来源，而不是自己另写一套可能漂移的
+表述。
+
+## 21.7 External Contribution 是一次有范围的行动
+
+在任何传输发生之前，用户必须先看到：目的地仓库；将被传输的具体文件
+与字段；完整的 diff 或等价的 payload 预览；脱敏过程中被移除或泛化
+了什么；这次行动是一次性的，还是会建立某种持续连接；是否还残留
+re-identification 或组合风险。
+
+授权只针对已经展示过的那一次行动和那份 payload 本身生效，除非用户
+另行配置了更广泛的工作流。
+
+## 21.8 DHT 与分布式存储：v1 Non-Goal
+
+DHT 或 P2P 存储在 v1 中明确不做，也明确禁止用于私有或项目本地的
+Case：发布与查询本身的 metadata 可能暴露敏感兴趣；低信息量描述的
+hash 可以被字典匹配；删除与撤回难以可靠保证；访问模式与节点复制
+难以向用户解释清楚；存在 Sybil 或投毒攻击伪造"重复出现"的风险；
+企业网络可能把未经请求的 P2P 流量当作恶意流量处理；这种行为无论
+初衷如何，观感上都容易被当成隐蔽的数据收集或恶意软件。
+
+未来唯一可能的例外，是经过单独批准的研究用途，或者分发本来就已经
+公开的材料（例如 public matcher pack 本身）——DHT 发布绝不能被
+描述成"私有 Case 的普通同步"。
