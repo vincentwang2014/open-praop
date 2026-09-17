@@ -25,6 +25,18 @@ completely valid submission.
 - **A Playbook** — a workflow combining several practices. See
   `playbooks/TEMPLATE.md`.
 
+## Optional: matching your incident locally first
+
+`matcher-pack/` holds a public matcher pack you can compare your
+incident against on your own machine before submitting, entirely
+offline — see protocol §21 for the full rules. This is optional and
+advisory only: whatever local result you get (a match, a partial fit,
+a no-fit, or nothing found at all) is just context you're welcome to
+mention in your submission. It has no authority over the actual
+mapping decision, which stays the maintainer's own call under Step 5
+of the review workflow, regardless of what your local comparison
+found.
+
 ## Before you submit: de-identify
 
 Open PRAOP does not need your full raw material. Keep a private, complete
