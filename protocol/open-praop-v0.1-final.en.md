@@ -9,7 +9,7 @@
 > canonical source. If a semantic discrepancy is discovered, the
 > canonical source governs until the discrepancy is resolved.
 >
-> Translated from canonical revision: `23608d3`
+> Translated from canonical revision: `e91b11c`
 
 **Status:** v0.1-final
 **Date:** 2026-09-04
@@ -143,6 +143,30 @@ Also explicitly separates Case acceptance from Pattern promotion: an
 accepted case gives its Pattern one valid anchor and triggers
 eligibility recalculation, but promotion itself remains a separate,
 deliberate decision under §10's Anchor-or-Demote rule.
+
+**Local-First Case Discovery and Public Contribution Boundary added
+(2026-09-17, first post-launch protocol change).** New §21 defines a
+public matcher-pack schema (generated from or validated against the
+Accepted corpus, not a separately hand-maintained doctrine source),
+four local, pre-submission, contributor-side match outcomes (MATCH /
+PARTIAL / NO_FIT / UNMATCHED — explicitly distinct from and
+subordinate to §13 Step 5's existing five maintainer-side mapping
+outcomes), the rule that a local non-match creates no obligation and
+changes no Pattern's status (extends, does not restate, §10
+Anchor-or-Demote and §13's existing Case-Acceptance/Pattern-Promotion
+separation), incident-clustering and anchor-independence recording
+fields extending §10's existing independence clause, the canonical
+**Private Case Locality Boundary** (no default cross-project scanning,
+telemetry, hidden registries, silent PR/upload, or DHT/P2P; any
+implementation claiming Open PRAOP compliance must point to this
+section rather than restate it independently), the requirement that
+external contribution always be a scoped, previewed, explicitly
+authorized action, and DHT/distributed storage as an explicit v1
+non-goal. This supersedes the 2026-09-06 internal decision to build no
+PRAOP tooling layer yet — a concrete local-first design now exists and
+this section is its normative record. Operational implementation (a
+skill or other tool consuming this schema) is out of scope for this
+change and is tracked separately.
 
 ---
 
@@ -1761,3 +1785,198 @@ For Open PRAOP itself (new in v0.1-final):
 > **Repair the state model, harden the anchor rule, clean the public
 > boundary, and add one second pair of eyes for doctrine-changing
 > decisions. Then stop.**
+
+---
+
+# 21. Local-First Case Discovery and Public Contribution Boundary
+
+## 21.1 Purpose
+
+Public PRAOP knowledge (Patterns, Practices, aliases, anti-mappings,
+Accepted Case anchors) should be brought to a user's private incident
+for comparison, not the other way around. This section is the
+protocol-level normative definition of that principle. How any
+particular implementation (for example the `praop-project` skill)
+actually implements it is that implementation's own responsibility,
+but it must not conflict with this section or establish a separate
+set of rules that can drift from it.
+
+## 21.2 Public Matcher Pack
+
+A public matcher pack is an artifact generated from, or validatable
+against, the Accepted public corpus, used to let any implementation
+match a private incident locally and offline. Open PRAOP owns the
+normative definition of this schema; the matcher pack must not become
+a separately hand-maintained doctrine source that can diverge from the
+corpus.
+
+Minimum field set (full definition lives in this repository's
+`matcher-pack/SCHEMA.md`):
+
+* `schema_version` — the schema version;
+* `mechanism_id`, `name`, `aliases` — mechanism identity and aliases;
+* `mechanism.trigger` / `mechanism.substitution` / `mechanism.failure_shape`
+  — the trigger condition, what gets substituted, and the specific
+  shape of the failure;
+* `observed_directions`, `possible_directions` — directions actually
+  observed vs. directions that remain an unverified hypothesis;
+* `watch_for`, `anti_mapping` — signals to watch for, and situations
+  where this mechanism should not be applied;
+* `accepted_case_anchors` — pointers to Accepted cases (`case_id`,
+  plus `incident_cluster_id` where an incident cluster is involved —
+  see §21.5);
+* `confidence`, `status` — must match the Pattern's own file, not be
+  independently re-assessed here.
+
+Provenance fields: corpus revision or release identifier, generated-at
+timestamp, source commit, content digest. Any implementation recording
+a match result must record which pack version it used, and must not
+imply that a stale or incomplete pack exhaustively represents the
+current public corpus.
+
+Acceptable ways to obtain the pack: bundled with an implementation; a
+user-initiated pull from Open PRAOP; an organization-pinned copy.
+Fetching the public pack must never carry query parameters derived
+from a private incident.
+
+## 21.3 Local Match Outcomes (pre-submission, contributor-side)
+
+Before formal submission, any implementation may compare an incident
+against the public matcher pack locally and record one of four
+outcomes:
+
+* **MATCH** — the observed mechanism fits an existing public mechanism
+  within its defined scope;
+* **PARTIAL** — some elements fit, but a material element or scope
+  condition does not;
+* **NO_FIT** — a considered comparison concludes the event should not
+  be forced into an existing mechanism;
+* **UNMATCHED** — the current public pack did not produce an adequate
+  candidate — this is a statement that the pack found nothing, not a
+  claim that the incident is novel.
+
+These four outcomes are **not the same as, and must not be treated as
+interchangeable with**, the five existing maintainer-side mapping
+outcomes in §13 Step 5 (Fits existing pattern / Partial fit / No fit /
+New pattern candidate / Out of scope): the outcomes in this section
+are the contributor's own unreviewed, pre-submission local observation
+and may be attached to a submission as context, but §13 Step 5's
+mapping remains the sole authoritative determination, and is not bound
+by a contributor's local result.
+
+## 21.4 Local Non-Match Creates No Obligation and Changes No Status
+
+A local `UNMATCHED` result does not mean, and must not be read as
+meaning, "this is a new Pattern," and it must not be used to change
+any existing Pattern's Confidence or Status. This is a direct
+extension of §10 Anchor-or-Demote and §13's existing "Case Acceptance
+and Pattern Promotion must stay separate" — this section does not
+restate either rule, it only adds: an unsubmitted, purely local
+non-match carries even less weight than a `Submitted` Case — it has
+not even cleared §13 Step 1's "is this real enough to review" bar.
+
+## 21.5 Incident Clustering and Anchor Independence
+
+Where a single concentrated episode produces several artifacts or
+several manifestations, submission and recording must keep
+"manifestation count" and "independent anchor count" separate, e.g.:
+
+```yaml
+incident_cluster_id: acf-contract-review-2026-09-16
+artifact_count: 3
+manifestation_count: 5
+independent_anchor_count: 1
+```
+
+Independence requires a materially separate underlying incident, not
+merely a different file, a different commit, a different agent within
+one coordinated run, or a different description of the same event —
+this is exactly §10's existing clause ("'Independent' means a distinct
+underlying incident, not a different write-up of the same incident"),
+extended here to the more common case of one episode producing several
+artifacts, with concrete recording fields. The final independence
+determination is always a human maintainer's call.
+
+The following state transitions are explicitly prohibited and must
+never happen automatically:
+
+* local `UNMATCHED` → automatically generating a new Pattern;
+* a PR being opened → automatically treated as an Accepted Case;
+* a Case being Accepted → automatically creating or promoting a
+  Pattern;
+* a second write-up of the same incident → counted as a second anchor;
+* several artifacts from one coordinated episode → counted as several
+  independent anchors merely because the files differ.
+
+Correspondingly, §13 Step 6.5's `## Maintainer Review` template gains
+one line:
+
+```markdown
+- [ ] Manifestation count and independent-anchor count are recorded
+      separately, if the submission spans a clustered episode
+```
+
+## 21.6 Private Case Locality Boundary (normative text)
+
+> **Private Case Locality Boundary**
+> Private or project-local Case material must remain within the
+> project scope explicitly authorized by the user. Any implementation
+> claiming Open PRAOP compliance must not scan other projects, create
+> a cross-project registry, publish fingerprints, synchronize
+> metadata, query a peer-to-peer network, or transmit any Case-derived
+> information to a remote destination — unless the user has explicitly
+> authorized the specific source scope, destination, and payload for
+> that specific action.
+
+"Case-derived information" includes not only raw text but also:
+hashes and fingerprints, embeddings, keywords and normalized mechanism
+statements, project or repository names, absolute and relative paths,
+commit identifiers, timestamps and incident identifiers, match results
+and candidate labels, and query terms derived from the incident. **A
+hash is not de-identification, and encryption alone does not authorize
+transmission.**
+
+By default, no implementation may: scan directories outside the
+currently authorized scope; discover or read unrelated repositories;
+create a hidden local or remote registry; connect to GitHub, GitLab,
+cloud storage, or a DHT to publish Case data; run background
+synchronization; upload telemetry about local matches or non-matches;
+automatically open a PR; or treat authorization already given for one
+submission as standing authorization for later submissions.
+
+This rule belongs at the kernel level or an equivalent
+highest-precedence instruction layer. How a particular implementation
+(for example the `praop-project` skill) actually implements it is that
+implementation's own responsibility, but it must point directly to
+this section as the authoritative source rather than write its own
+version that can drift.
+
+## 21.7 External Contribution Is a Scoped Action
+
+Before any transmission happens, the user must be shown: the exact
+destination repository; the exact files and fields to be transmitted;
+the complete diff or an equivalent payload preview; what was removed
+or generalized during de-identification; whether the action is
+one-time or establishes any persistent connection; and any remaining
+re-identification or combination risk.
+
+Authorization applies only to the action and payload actually shown,
+unless the user has separately configured a broader workflow.
+
+## 21.8 DHT and Distributed Storage: v1 Non-Goal
+
+DHT or peer-to-peer storage is explicitly out of scope for v1, and
+explicitly prohibited for private or project-local Cases: publication
+and query metadata can themselves reveal sensitive interests; hashes
+of low-entropy descriptions can be dictionary-matched; deletion and
+revocation cannot be reliably guaranteed; access patterns and node
+replication are difficult to explain to users; Sybil or poisoning
+attacks can fabricate apparent recurrence; enterprise networks may
+treat unrequested peer-to-peer traffic as malicious; and, regardless of
+intent, the behavior would reasonably resemble covert data collection
+or malware.
+
+The only possible future exception is separately approved research use,
+or distribution of material that is already public (such as the public
+matcher pack itself) — DHT publication must never be described as
+ordinary synchronization of private Cases.
