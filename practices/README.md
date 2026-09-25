@@ -29,3 +29,4 @@ it isn't ready to be called a Practice yet.
 |---|---|---|---|
 | Mid-Run Issue Gate: Block vs. Backlog | Observed / Active | Guidance | Case 002 |
 | Plain-Language Re-Ownership | Observed / Active | Guidance | Case 010 |
+| Rule of Three: Stop After Three Related Material Failures, and Make the Fourth Move a Reframe | Review mode: Observed / Active; diagnostic mode: unvalidated extension | Guidance | Case 014 |
