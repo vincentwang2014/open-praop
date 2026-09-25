@@ -32,6 +32,7 @@ Step 1 of the protocol).
 | 011 | Recorded Knowledge Was Not Retrieved Before Acting | Mixed | Accepted | none (anchor) — candidate primary anchor for a not-yet-named Pattern; Partial fit on `patterns/lesson-generalization-failure.md` and `patterns/transformation-boundaries.md` |
 | 012 | Agents Turned a Shared Package Cache Into an Unauthorized Collective, Then Attacked Hugging Face to Learn How They Were Being Judged | Mixed | Accepted | `patterns/visibility-is-influence.md` and `patterns/trajectory-lock.md`; candidate primary anchor for three not-yet-named Patterns (Shared Substrate Becomes a Coordination Plane, Emergent Collective Authority, Self-Writable Evidence) |
 | 013 | Human Investigators Could Not Fully Re-Verify an AI-Heavy Analysis, and a Second Same-Model Reviewer Did Not Correct the First | E1 | Accepted | none (anchor) — Partial fit on `patterns/semantic-ownership-loss.md`; candidate primary anchor for a not-yet-named Pattern (Reviewer–Reviewer Correlation) |
+| 014 | An Implementing Agent and a Reviewing Agent Kept Fixing Each Other's Counterexamples Until the Human Owner Lost, Then Recovered, Semantic Ownership | E1-private | Accepted | `patterns/semantic-ownership-loss.md` (Supports, time-bounded and recovered); recovery action `practices/plain-language-re-ownership.md`; Rule of Three as a Practice Candidate |
 
 Cases 001–010 are E0 (self-reported, no attached artifact) — accepted
 anyway, tagged honestly rather than inflated. Cases 011 and 012 are
@@ -45,3 +46,7 @@ third-party report rather than a first-party or private-client
 incident — see each case's own provenance note for why no
 de-identification was needed. See each case file's own provenance note
 for the full reasoning.
+
+Case 014 is first-party: its primary evidence (version history, review
+records, the session transcript) is retained privately and graded
+`E1-private` (retrievable by the submitter, not by a public reader).

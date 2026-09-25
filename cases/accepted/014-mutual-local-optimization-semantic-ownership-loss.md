@@ -1,6 +1,6 @@
-# Case Submission — An Implementing Agent and a Reviewing Agent Kept Fixing Each Other's Counterexamples Until the Human Owner Lost, Then Recovered, Semantic Ownership
+# Case 014 — An Implementing Agent and a Reviewing Agent Kept Fixing Each Other's Counterexamples Until the Human Owner Lost, Then Recovered, Semantic Ownership
 
-**Status:** Submitted — pending maintainer review
+**Status:** Accepted
 **Evidence level:** E1-private — see Section H (primary evidence retained privately)
 **Date:** One working day, 2026.
 **Domain:** Software engineering: a client-side check on outgoing user
@@ -10,6 +10,11 @@ applications.
 families: an **implementing agent** that wrote the code and designs, and
 a **reviewing agent** asked to find flaws. A single human **owner**
 relayed between them, set the goals, and approved each step.
+**Maps to:** `../../patterns/semantic-ownership-loss.md` (Supports,
+time-bounded and recovered); recovery action
+`../../practices/plain-language-re-ownership.md` (directly applied);
+Rule of Three: Practice Candidate (observed intervention) — see
+Pattern Mapping below.
 
 > **De-identified submission.** Derived from a private, internally
 > accepted case record. Names, project, repository, paths, commit
@@ -258,3 +263,58 @@ Measure the real system before designing. At the second severe finding,
 pause and check the premise (early warning). After three related
 material failures in the same working frame, stop, and make the fourth
 move a reframe, not an escalation (rule of three).
+
+## Pattern Mapping
+
+- **Semantic Ownership Loss** (`../../patterns/semantic-ownership-loss.md`)
+  — **Supports, time-bounded and recovered.** The owner retained formal
+  authority throughout but, for several rounds, stopped understanding and
+  challenging the operational meaning of the AI-generated threat model
+  and review findings; he approved a threat model whose practical
+  consequences he could not have stated in plain language. Semantic
+  ownership was recovered through a human-triggered plain-language reset
+  (Section C, step 6). The pattern does not require the loss to be
+  permanent. This case adds a supporting anchor; it does not by itself
+  change the pattern's Confidence / Status.
+- **Plain-Language Re-Ownership** (`../../practices/plain-language-re-ownership.md`)
+  — **directly applied; the observed recovery action.** The owner
+  restated the goal in his own words and replaced the premise. Recorded
+  separately from the rule of three, which was the trigger, not the
+  recovery.
+- **Rule of Three** — **Practice Candidate; observed intervention**, with
+  one incomplete trigger (a redesign under the same premise) and one
+  effective trigger (a reframe) in this incident. Not an established
+  Practice in this corpus at the time of acceptance; any Practice is a
+  separate submission.
+- **Trajectory Lock** (`../../patterns/trajectory-lock.md`) — **Partial.**
+  A premise pursued through increasingly elaborate patches and
+  re-examined only after a human interrupt matches; but the premise was
+  not a false belief about the world so much as the wrong model for the
+  need (a scope mismatch).
+- **Control Accretion** (`../../patterns/control-accretion.md`) —
+  **Partial.** Mechanism accumulated without asking about its cost, but
+  each addition answered a concrete finding rather than being ceremonial
+  process.
+
+### Candidate mechanism
+
+- **Mutual Local Optimization** (working name; candidate only). The
+  implementer and the reviewer each performed their local task correctly
+  (patch the finding; find the next break) while jointly expanding a
+  premise nobody had re-authorized. One incident; not proposed as a
+  Pattern here.
+
+### Maintainer review notes
+
+- Accepted as a first-party case. Its primary evidence is retained
+  privately (E1-private: retrievable by the submitter, not by a public
+  reader); the reproductions of review findings were not saved (E0).
+- Deliberately **not** used as evidence of same-model reviewer
+  correlation (Case 013): the two agents came from different model
+  families, and the reviewer kept disagreeing with the implementer.
+- Two other first-party incidents from the same environment are planned
+  as separate submissions. They are distinct incidents, not
+  environment-independent evidence.
+- No Pattern or Practice file is changed by this acceptance; adding this
+  case as an anchor to a Pattern's own file is a separate, reviewed
+  change.
